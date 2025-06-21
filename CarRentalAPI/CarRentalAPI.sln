@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalAPI", "CarRentalAPI\CarRentalAPI.csproj", "{838630A3-C654-4287-ABE6-7145F95CFE59}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalMobile", "CarRentalMobile\CarRentalMobile.csproj", "{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{838630A3-C654-4287-ABE6-7145F95CFE59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{838630A3-C654-4287-ABE6-7145F95CFE59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{838630A3-C654-4287-ABE6-7145F95CFE59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
