@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|solutionrelative:carrentalapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalapi\\carrentalapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|solutionrelative:carrentalapi\\carrentalapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Program.cs",
+              "RelativeDocumentMoniker": "CarRentalAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Program.cs",
+              "RelativeToolTip": "CarRentalAPI\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T11:22:10.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CarRentalAPI",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\CarRentalAPI.csproj",
+              "RelativeDocumentMoniker": "CarRentalAPI\\CarRentalAPI.csproj",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\CarRentalAPI.csproj",
+              "RelativeToolTip": "CarRentalAPI\\CarRentalAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-21T11:04:25.502Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
