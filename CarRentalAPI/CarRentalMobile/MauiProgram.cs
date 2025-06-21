@@ -33,7 +33,10 @@ namespace CarRentalMobile
 
             builder.Services.AddTransient<CitiesPage>();
 
-            builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddTransient<CarsViewModel>(); 
+            builder.Services.AddTransient<CarsPage>();
+
+            //builder.Services.AddSingleton<MainPage>();
 
 
             return builder.Build();

@@ -28,6 +28,22 @@ namespace CarRentalAPI.Controllers
             return await _context.Cars.ToListAsync();
         }
 
+        [HttpGet("ByCity/{cityId}")] // Definicja trasy
+        public async Task<ActionResult<IEnumerable<Car>>> GetCarsByCity(int cityId)
+        {
+            // Zakładamy, że model Car ma właściwość CityId
+            var cars = await _context.Cars
+                                    .Where(c => c.CityId == cityId)
+                                    .ToListAsync();
+
+            if (cars == null || !cars.Any())
+            {
+                return NotFound($"No cars found for city with ID {cityId}.");
+            }
+
+            return cars;
+        }
+
         // GET: api/Cars/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Car>> GetCar(int id)

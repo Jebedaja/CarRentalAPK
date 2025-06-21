@@ -78,6 +78,35 @@ namespace CarRentalMobile.Services
             }
         }
 
+        public async Task<ObservableCollection<Car>> GetCarsByCityIdAsync(int cityId)
+        {
+            try
+            {
+                // Zakładamy, że w Twoim API istnieje taki endpoint.
+                // Jeśli nie, będziemy musieli dodać go do CarRentalAPI/Controllers/CarsController
+                var response = await _httpClient.GetAsync($"{_baseUrl}Cars/ByCity/{cityId}");
+                response.EnsureSuccessStatusCode();
+                var json = await response.Content.ReadAsStringAsync();
+                var cars = JsonConvert.DeserializeObject<ObservableCollection<Car>>(json);
+                return cars ?? new ObservableCollection<Car>();
+            }
+            catch (HttpRequestException ex)
+            {
+                Console.WriteLine($"Błąd HTTP podczas pobierania samochodów dla miasta {cityId}: {ex.Message}");
+                return new ObservableCollection<Car>();
+            }
+            catch (JsonException ex)
+            {
+                Console.WriteLine($"Błąd deserializacji JSON dla samochodów dla miasta {cityId}: {ex.Message}");
+                return new ObservableCollection<Car>();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Nieoczekiwany błąd podczas pobierania samochodów dla miasta {cityId}: {ex.Message}");
+                return new ObservableCollection<Car>();
+            }
+        }
+
         // Możesz tutaj dodawać inne metody, np. do tworzenia rezerwacji, pobierania rezerwacji itp.
         // public async Task<bool> CreateReservationAsync(Reservation reservation) { ... }
     }

@@ -4,11 +4,11 @@ namespace CarRentalMobile
 {
     public partial class App : Application
     {
-        public App(CitiesPage citiesPage)
+        public App()
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(citiesPage);
+            MainPage = new AppShell();
         }
     }
 }

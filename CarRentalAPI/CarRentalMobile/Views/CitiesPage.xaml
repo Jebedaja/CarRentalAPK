@@ -4,18 +4,20 @@
              xmlns:viewmodels="clr-namespace:CarRentalMobile.ViewModels"
              xmlns:models="clr-namespace:CarRentalMobile.Models"
              x:Class="CarRentalMobile.Views.CitiesPage"
-             Title="Dostępne Miasta">
+             Title="Wybierz Miasto">
 
-    <ContentPage.BindingContext>
-        <viewmodels:CitiesViewModel />
-    </ContentPage.BindingContext>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Odśwież" Command="{Binding LoadCitiesCommand}" />
+    </ContentPage.ToolbarItems>
 
     <Grid RowDefinitions="Auto, *">
         <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"
                            Color="{AppThemeBinding Light=Blue, Dark=LightBlue}"
                            Grid.Row="0" HorizontalOptions="Center" VerticalOptions="Center" />
 
-        <CollectionView Grid.Row="1" ItemsSource="{Binding Cities}">
+        <CollectionView Grid.Row="1"
+                        ItemsSource="{Binding Cities}"
+                        SelectionMode="None"  >
             <CollectionView.EmptyView>
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                     <Label Text="Brak dostępnych miast." FontSize="Medium" />
@@ -26,6 +28,10 @@
                 <DataTemplate x:DataType="models:City">
                     <Frame Margin="10" Padding="10" CornerRadius="5" HasShadow="True">
                         <StackLayout Orientation="Vertical" Padding="5">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:CitiesViewModel}}, Path=GoToCarsCommand}"
+                                                      CommandParameter="{Binding .}" />
+                            </StackLayout.GestureRecognizers>
                             <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Large" />
                         </StackLayout>
                     </Frame>

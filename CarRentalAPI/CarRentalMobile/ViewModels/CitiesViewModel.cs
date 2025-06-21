@@ -1,14 +1,9 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using CarRentalMobile.Models;
 using CarRentalMobile.Services;
+using Microsoft.Maui.Controls; // Potrzebne do Shell.Current
 
 namespace CarRentalMobile.ViewModels
 {
@@ -16,43 +11,70 @@ namespace CarRentalMobile.ViewModels
     {
         private readonly CarRentalApiService _apiService;
 
-        // Właściwość do przechowywania listy miast
         [ObservableProperty]
         private ObservableCollection<City> _cities;
 
-        // Właściwość do obsługi stanu ładowania danych
         [ObservableProperty]
         private bool _isBusy;
 
-        public CitiesViewModel()
-        {
-            _apiService = new CarRentalApiService(); // Inicjalizuj serwis API
-            _cities = new ObservableCollection<City>(); // Inicjalizuj kolekcję miast
-            LoadCitiesCommand = new AsyncRelayCommand(LoadCitiesAsync); // Inicjalizuj komendę
-        }
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(CanNavigateToCars))]
+        private City selectedCity; // Pole dla SelectedCity
 
-        // Komenda do ładowania miast
+        // Komenda LoadCitiesCommand
         public IAsyncRelayCommand LoadCitiesCommand { get; }
 
+        // Pomocnicza właściwość
+        public bool CanNavigateToCars => SelectedCity != null;
+
+        public CitiesViewModel(CarRentalApiService apiService)
+        {
+            _apiService = apiService;
+            _cities = new ObservableCollection<City>();
+            LoadCitiesCommand = new AsyncRelayCommand(LoadCitiesAsync);
+
+            // selectedCity jest inicjalizowane na null domyślnie
+        }
+
+        // Automatycznie generuje GoToCarsCommand
+        [RelayCommand]
+        private async Task GoToCars(City selectedCityFromTap) // Nazwa parametru inna, by nie kolidowała z polem
+        {
+            if (selectedCityFromTap == null)
+                return;
+
+            // Ustaw SelectedCity (wygenerowaną właściwość) - to spowoduje aktualizację CanNavigateToCars
+            // Ważne, aby upewnić się, że GoToCarsCommand.CanExecuteChanged jest wywołane
+            // ale w tym scenariuszu, po wykonaniu komendy, zwykle nie ma to wpływu na wizualny stan elementu listy
+            SelectedCity = selectedCityFromTap; // Ustaw wygenerowaną właściwość
+
+            await Shell.Current.GoToAsync($"CarsPage?cityId={selectedCityFromTap.Id}&cityName={selectedCityFromTap.Name}");
+
+            // Możesz zresetować selectedCity po nawigacji, jeśli chcesz, aby element nie był już "wybrany"
+            // jeśli nie ma to znaczenia dla UI, można pominąć.
+            SelectedCity = null;
+        }
+
+        // ... (reszta metody LoadCitiesAsync bez zmian)
         private async Task LoadCitiesAsync()
         {
-            if (IsBusy) // Zapobiega wielokrotnym wywołaniom, gdy już ładujemy dane
+            if (IsBusy)
                 return;
 
             try
             {
-                IsBusy = true; // Ustaw flagę ładowania na true
-                Cities.Clear(); // Wyczyść istniejącą listę przed załadowaniem nowych danych
-                var fetchedCities = await _apiService.GetCitiesAsync(); // Pobierz miasta z API
+                IsBusy = true;
+                Cities.Clear();
+                var fetchedCities = await _apiService.GetCitiesAsync();
 
                 foreach (var city in fetchedCities)
                 {
-                    Cities.Add(city); // Dodaj każde miasto do kolekcji
+                    Cities.Add(city);
                 }
             }
             finally
             {
-                IsBusy = false; // Ustaw flagę ładowania na false po zakończeniu
+                IsBusy = false;
             }
         }
     }
