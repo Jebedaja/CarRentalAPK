@@ -21,6 +21,8 @@ namespace CarRentalMobile.Models
         // Klucz obcy do Car
         public int CarId { get; set; }
         public Car Car { get; set; } // Obiekt Car (relacja)
+        public decimal TotalPrice => RentalDays * (Car?.DailyPrice ?? 0);
+
 
         // Klucz obcy do City (opcjonalnie, ale może być przydatne do filtrowania rezerwacji po mieście)
         // Możemy go dodać, jeśli uznamy to za potrzebne później. Na razie zostawimy tylko CarId,

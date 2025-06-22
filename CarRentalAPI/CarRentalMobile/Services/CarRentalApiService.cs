@@ -1,20 +1,14 @@
 ﻿using CarRentalMobile.Models;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace CarRentalMobile.Services
 {
     public class CarRentalApiService
     {
-        // WAŻNE: Zmień ten URL na URL Twojego wdrożonego API na Azure!
-        // Użyj tego dłuższego, który działa ze /swagger
         private readonly string _baseUrl = "https://carrentalbackend-ug-e9gtefcjaubeffev.germanywestcentral-01.azurewebsites.net/api/";
         private readonly HttpClient _httpClient;
 
@@ -28,14 +22,13 @@ namespace CarRentalMobile.Services
             try
             {
                 var response = await _httpClient.GetAsync($"{_baseUrl}Cities");
-                response.EnsureSuccessStatusCode(); // Sprawdza, czy kod statusu odpowiedzi to 2xx
+                response.EnsureSuccessStatusCode();
                 var json = await response.Content.ReadAsStringAsync();
                 var cities = JsonConvert.DeserializeObject<ObservableCollection<City>>(json);
-                return cities ?? new ObservableCollection<City>(); // Zwraca pustą kolekcję, jeśli deserializacja zwróci null
+                return cities ?? new ObservableCollection<City>();
             }
             catch (HttpRequestException ex)
             {
-                // Tutaj możesz logować błędy lub wyświetlać komunikaty użytkownikowi
                 Console.WriteLine($"Błąd HTTP podczas pobierania miast: {ex.Message}");
                 return new ObservableCollection<City>();
             }
@@ -82,8 +75,6 @@ namespace CarRentalMobile.Services
         {
             try
             {
-                // Zakładamy, że w Twoim API istnieje taki endpoint.
-                // Jeśli nie, będziemy musieli dodać go do CarRentalAPI/Controllers/CarsController
                 var response = await _httpClient.GetAsync($"{_baseUrl}Cars/ByCity/{cityId}");
                 response.EnsureSuccessStatusCode();
                 var json = await response.Content.ReadAsStringAsync();
@@ -107,7 +98,31 @@ namespace CarRentalMobile.Services
             }
         }
 
-        // Możesz tutaj dodawać inne metody, np. do tworzenia rezerwacji, pobierania rezerwacji itp.
-        // public async Task<bool> CreateReservationAsync(Reservation reservation) { ... }
+        public async Task<ObservableCollection<Reservation>> GetReservationsAsync()
+        {
+            try
+            {
+                var response = await _httpClient.GetAsync($"{_baseUrl}Reservations");
+                response.EnsureSuccessStatusCode();
+                var json = await response.Content.ReadAsStringAsync();
+                var reservations = JsonConvert.DeserializeObject<ObservableCollection<Reservation>>(json);
+                return reservations ?? new ObservableCollection<Reservation>();
+            }
+            catch (HttpRequestException ex)
+            {
+                Console.WriteLine($"Błąd HTTP podczas pobierania rezerwacji: {ex.Message}");
+                return new ObservableCollection<Reservation>();
+            }
+            catch (JsonException ex)
+            {
+                Console.WriteLine($"Błąd deserializacji JSON dla rezerwacji: {ex.Message}");
+                return new ObservableCollection<Reservation>();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Nieoczekiwany błąd podczas pobierania rezerwacji: {ex.Message}");
+                return new ObservableCollection<Reservation>();
+            }
+        }
     }
 }

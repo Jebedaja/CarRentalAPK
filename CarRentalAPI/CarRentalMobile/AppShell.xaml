@@ -7,33 +7,25 @@
     Shell.FlyoutBehavior="Disabled"
     Title="CarRentalMobile">
 
+    <!-- Ustawienie domyślnej strony startowej -->
+    <ShellContent
+        Title="Menu Główne"
+        ContentTemplate="{DataTemplate local:MainMenuPage}"
+        Route="MainMenuPage" />
+
+    <!-- Możesz zarejestrować inne strony tutaj -->
     <ShellContent
         Title="Miasta"
         ContentTemplate="{DataTemplate local:CitiesPage}"
         Route="CitiesPage" />
+
     <Shell.FlyoutItems>
     </Shell.FlyoutItems>
 
+    <!-- Style możesz zostawić bez zmian -->
     <Shell.Resources>
         <ResourceDictionary>
-            <Style TargetType="Shell">
-                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light=#45535E, Dark=#2B2B2B}" />
-                <Setter Property="ForegroundColor" Value="White" />
-                <Setter Property="TitleColor" Value="White" />
-                <Setter Property="DisabledColor" Value="#B4FFFFFF" />
-                <Setter Property="UnselectedColor" Value="#95FFFFFF" />
-            </Style>
-
-            <Style TargetType="TabBar">
-                <Setter Property="Shell.TabBarBackgroundColor" Value="{AppThemeBinding Light=#45535E, Dark=#2B2B2B}" />
-                <Setter Property="Shell.TabBarForegroundColor" Value="White" />
-                <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.TabBarDisabledColor" Value="#B4FFFFFF" />
-            </Style>
-
-            <Style TargetType="FlyoutItem">
-            </Style>
-
+            <!-- ...style... -->
         </ResourceDictionary>
     </Shell.Resources>
 

@@ -8,9 +8,10 @@
         public int Year { get; set; } 
         public decimal PricePerDay { get; set; } 
         public string ImageUrl { get; set; } 
-        public bool IsAvailable { get; set; } = true; 
+        public bool IsAvailable { get; set; } = true;
 
-       
+        public decimal DailyPrice { get; set; }
+
         public int CityId { get; set; }
         public City City { get; set; } 
 
