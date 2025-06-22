@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System;
+using Newtonsoft.Json;
 
 namespace CarRentalMobile.Models
 {
@@ -22,6 +23,7 @@ namespace CarRentalMobile.Models
 
         // Klucz obcy do Car
         public int CarId { get; set; }
+        [JsonIgnore]
         public Car? Car { get; set; } // Obiekt Car (relacja)
         //public decimal TotalPrice => RentalDays * (Car?.DailyPrice ?? 0);
 

@@ -131,21 +131,24 @@ namespace CarRentalMobile.Services
             try
             {
                 var json = JsonConvert.SerializeObject(reservation);
-                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                Console.WriteLine("Wysyłany JSON:");
+                Console.WriteLine(json); // debug
 
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
                 var response = await _httpClient.PostAsync($"{_baseUrl}Reservations", content);
 
                 if (!response.IsSuccessStatusCode)
                 {
+                    Console.WriteLine("Błąd odpowiedzi: " + response.StatusCode);
                     var errorContent = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine($"Błąd POST: {response.StatusCode} - {errorContent}");
+                    Console.WriteLine("Treść błędu: " + errorContent);
                 }
 
                 return response.IsSuccessStatusCode;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Wyjątek podczas POST: {ex.Message}");
+                Console.WriteLine($"Wyjątek przy wysyłce rezerwacji: {ex.Message}");
                 return false;
             }
         }
