@@ -124,6 +124,10 @@ public partial class ReservationViewModel : ObservableObject
         Console.WriteLine(JsonConvert.SerializeObject(reservation, Formatting.Indented));
 
 
+        var json = JsonConvert.SerializeObject(reservation);
+        Console.WriteLine("Wysyłam JSON: " + json);
+
+
         // 📡 Wysłanie POST do API
         var result = await _apiService.CreateReservationAsync(reservation);
 
