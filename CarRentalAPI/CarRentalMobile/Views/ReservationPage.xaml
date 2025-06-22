@@ -1,25 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:CarRentalMobile.ViewModels"
              x:Class="CarRentalMobile.Views.ReservationPage"
-             Title="Zarezerwuj Samochód">
+             Title="Rezerwacja pojazdu">
+
+    <ContentPage.BindingContext>
+        <viewmodels:ReservationViewModel />
+    </ContentPage.BindingContext>
 
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
-            <Label Text="Imię:" />
-            <Entry x:Name="FirstNameEntry" Placeholder="Wpisz imię" />
 
-            <Label Text="Nazwisko:" />
-            <Entry x:Name="LastNameEntry" Placeholder="Wpisz nazwisko" />
+            <Label Text="{Binding CarDisplay}" FontSize="18" FontAttributes="Bold" HorizontalOptions="Center" />
 
-            <Label Text="Wiek:" />
-            <Entry x:Name="AgeEntry" Keyboard="Numeric" Placeholder="Wpisz wiek" />
+            <Entry Placeholder="Imię" Text="{Binding FirstName}" />
+            <Entry Placeholder="Nazwisko" Text="{Binding LastName}" />
 
-            <Label Text="Liczba dni wynajmu:" />
-            <Entry x:Name="DaysEntry" Keyboard="Numeric" Placeholder="Na ile dni?" />
+            <Entry Placeholder="Wiek" Keyboard="Numeric" Text="{Binding Age}" />
+            <Entry Placeholder="Liczba dni" Keyboard="Numeric" Text="{Binding RentalDays}" />
 
-            <Button Text="Zarezerwuj" Clicked="OnReserveClicked" BackgroundColor="Green" TextColor="White" />
+            <Button Text="Zarezerwuj"
+                    Command="{Binding SubmitReservationCommand}"
+                    BackgroundColor="#2196F3"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Padding="10,5" />
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
+
 

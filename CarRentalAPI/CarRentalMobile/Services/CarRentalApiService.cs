@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.ObjectModel;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace CarRentalMobile.Services
@@ -122,6 +123,33 @@ namespace CarRentalMobile.Services
             {
                 Console.WriteLine($"Nieoczekiwany błąd podczas pobierania rezerwacji: {ex.Message}");
                 return new ObservableCollection<Reservation>();
+            }
+        }
+
+        public async Task<bool> CreateReservationAsync(Reservation reservation)
+        {
+            try
+            {
+                var json = JsonConvert.SerializeObject(reservation);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await _httpClient.PostAsync($"{_baseUrl}Reservations", content);
+                return response.IsSuccessStatusCode;
+            }
+            catch (HttpRequestException ex)
+            {
+                Console.WriteLine($"Błąd HTTP podczas tworzenia rezerwacji: {ex.Message}");
+                return false;
+            }
+            catch (JsonException ex)
+            {
+                Console.WriteLine($"Błąd serializacji JSON rezerwacji: {ex.Message}");
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Nieoczekiwany błąd podczas tworzenia rezerwacji: {ex.Message}");
+                return false;
             }
         }
     }

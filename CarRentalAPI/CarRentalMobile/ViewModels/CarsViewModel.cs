@@ -6,7 +6,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Input; // <-- Dodane: potrzebne do ICommand
+using Newtonsoft.Json; // <-- Dodane: do serializacji auta do JSON
 using CarRentalMobile.Models;
 using CarRentalMobile.Services;
 
@@ -30,11 +31,17 @@ namespace CarRentalMobile.ViewModels
         [ObservableProperty]
         private string _cityName; // Właściwość do przechowywania nazwy miasta dla wyświetlenia
 
+        // 🔹 NOWOŚĆ: Komenda do przejścia na stronę rezerwacji auta
+        public ICommand GoToReservationCommand { get; }
+
         public CarsViewModel(CarRentalApiService apiService)
         {
             _apiService = apiService;
             _cars = new ObservableCollection<Car>();
             LoadCarsCommand = new AsyncRelayCommand(LoadCarsAsync);
+
+            // 🔹 NOWOŚĆ: Inicjalizacja komendy z metodą
+            GoToReservationCommand = new Command<Car>(async (car) => await GoToReservationPage(car));
         }
 
         public IAsyncRelayCommand LoadCarsCommand { get; }
@@ -66,6 +73,16 @@ namespace CarRentalMobile.ViewModels
             }
         }
 
+        // 🔹 NOWOŚĆ: Przechodzi do ReservationPage z przekazanym JSONem auta
+        private async Task GoToReservationPage(Car car)
+        {
+            if (car == null)
+                return;
+
+            var carJson = JsonConvert.SerializeObject(car); // Zamiana auta na JSON
+            await Shell.Current.GoToAsync($"ReservationPage?carJson={Uri.EscapeDataString(carJson)}");
+        }
+
         // Metoda, która zostanie wywołana po ustawieniu CityId przez QueryProperty
         partial void OnCityIdChanged(int value)
         {
@@ -77,3 +94,4 @@ namespace CarRentalMobile.ViewModels
         }
     }
 }
+
