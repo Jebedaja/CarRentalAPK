@@ -38,6 +38,10 @@ namespace CarRentalMobile
 
             //builder.Services.AddSingleton<MainPage>();
 
+            builder.Services.AddTransient<ReservationsViewModel>();
+            builder.Services.AddTransient<ReservationPage>();
+
+
 
             return builder.Build();
         }

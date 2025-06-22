@@ -8,8 +8,13 @@ public partial class AppShell : Shell
     {
         InitializeComponent();
 
+        Routing.RegisterRoute(nameof(MainMenuPage), typeof(MainMenuPage));
+        Routing.RegisterRoute(nameof(CitiesPage), typeof(CitiesPage));
         // Rejestracja trasy dla CarsPage
         Routing.RegisterRoute(nameof(CarsPage), typeof(CarsPage));
+
+        Routing.RegisterRoute(nameof(ReservationPage), typeof(ReservationPage));
+
 
         // Tutaj możesz rejestrować inne trasy, np. dla strony rezerwacji
         // Routing.RegisterRoute(nameof(ReservationPage), typeof(ReservationPage));

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:CarRentalMobile.ViewModels"
+             xmlns:models="clr-namespace:CarRentalMobile.Models"
+             x:Class="CarRentalMobile.Views.ReservationPage"
+             Title="Moje Rezerwacje">
+
+    <Grid RowDefinitions="Auto, *">
+        <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" 
+                           Color="Blue" HorizontalOptions="Center" />
+        <CollectionView Grid.Row="1" ItemsSource="{Binding Reservations}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Reservation">
+                    <Frame Margin="10" Padding="10">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Car.Brand}" FontAttributes="Bold" />
+                            <Label Text="{Binding Car.Model}" />
+                            <Label Text="{Binding StartDate, StringFormat='Start: {0:d}'}" />
+                            <Label Text="{Binding EndDate, StringFormat='Koniec: {0:d}'}" />
+                            <Label Text="{Binding RentalDays, StringFormat='Dni: {0}'}" />
+                            <Label Text="{Binding Car.PricePerDay, StringFormat='Cena/dzień: {0:C}'}" />
+                            <Label Text="{Binding TotalPrice, StringFormat='Suma: {0:C}'}" />
+                            <!-- przycisk usuń dodamy później -->
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>
