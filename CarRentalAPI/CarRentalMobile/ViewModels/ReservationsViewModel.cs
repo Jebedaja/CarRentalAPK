@@ -3,10 +3,10 @@ using CarRentalMobile.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Newtonsoft.Json;
-using System.Windows.Input;
 
 namespace CarRentalMobile.ViewModels;
 
+// Pozwala przekazać JSON z danymi samochodu przy nawigacji
 [QueryProperty(nameof(CarJson), "carJson")]
 public partial class ReservationViewModel : ObservableObject
 {
@@ -18,14 +18,18 @@ public partial class ReservationViewModel : ObservableObject
         SubmitReservationCommand = new AsyncRelayCommand(SendReservationAsync);
     }
 
-    [ObservableProperty]
-    private string carJson;
+    // ================================
+    // 🔽 Właściwości do bindowania
+    // ================================
 
     [ObservableProperty]
-    private string firstName;
+    private string? carJson;
 
     [ObservableProperty]
-    private string lastName;
+    private string? firstName;
+
+    [ObservableProperty]
+    private string? lastName;
 
     [ObservableProperty]
     private int age;
@@ -34,37 +38,77 @@ public partial class ReservationViewModel : ObservableObject
     private int rentalDays;
 
     [ObservableProperty]
-    private Car selectedCar;
+    private Car? selectedCar;
 
+    // ================================
+    // 🔘 Komenda do zatwierdzenia rezerwacji
+    // ================================
     public IAsyncRelayCommand SubmitReservationCommand { get; }
 
-    public string CarDisplay => selectedCar != null
-        ? $"{selectedCar.Brand} {selectedCar.Model} ({selectedCar.Year})"
-        : "Wybrany pojazd";
+    // ================================
+    // 🪧 Tekst do nagłówka formularza
+    // ================================
+    public string CarDisplay => SelectedCar is null
+        ? "Wybrany pojazd"
+        : $"{SelectedCar.Brand} {SelectedCar.Model} ({SelectedCar.Year})";
 
+    // ================================
+    // 🔁 Automatyczna aktualizacja nagłówka po zmianie samochodu
+    // ================================
+    partial void OnSelectedCarChanged(Car? value)
+    {
+        OnPropertyChanged(nameof(CarDisplay));
+    }
+
+    // ================================
+    // 📥 Deserializacja JSON z samochodem przy przejściu do widoku
+    // ================================
     partial void OnCarJsonChanged(string value)
     {
         if (!string.IsNullOrWhiteSpace(value))
         {
-            SelectedCar = JsonConvert.DeserializeObject<Car>(value);
-            OnPropertyChanged(nameof(CarDisplay));
+            try
+            {
+                SelectedCar = JsonConvert.DeserializeObject<Car>(value);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Błąd deserializacji samochodu: {ex.Message}");
+            }
         }
     }
 
+    // ================================
+    // 📤 Wysłanie rezerwacji do API
+    // ================================
     private async Task SendReservationAsync()
     {
+        // 👮‍♂️ Walidacje formularza
+        if (SelectedCar == null)
+        {
+            await Shell.Current.DisplayAlert("Błąd", "Nie wybrano pojazdu.", "OK");
+            return;
+        }
+
+        if (string.IsNullOrWhiteSpace(FirstName) || string.IsNullOrWhiteSpace(LastName))
+        {
+            await Shell.Current.DisplayAlert("Błąd", "Uzupełnij imię i nazwisko.", "OK");
+            return;
+        }
+
         if (Age < 21)
         {
-            await Shell.Current.DisplayAlert("Błąd", "Musisz mieć co najmniej 21 lat", "OK");
+            await Shell.Current.DisplayAlert("Błąd", "Musisz mieć co najmniej 21 lat.", "OK");
             return;
         }
 
         if (RentalDays <= 0)
         {
-            await Shell.Current.DisplayAlert("Błąd", "Liczba dni musi być większa niż 0", "OK");
+            await Shell.Current.DisplayAlert("Błąd", "Liczba dni musi być większa niż 0.", "OK");
             return;
         }
 
+        // 📝 Przygotowanie danych do API
         var reservation = new Reservation
         {
             FirstName = FirstName,
@@ -76,6 +120,7 @@ public partial class ReservationViewModel : ObservableObject
             CarId = SelectedCar.Id
         };
 
+        // 📡 Wysłanie POST do API
         var result = await _apiService.CreateReservationAsync(reservation);
 
         if (result)
@@ -85,9 +130,10 @@ public partial class ReservationViewModel : ObservableObject
         }
         else
         {
-            await Shell.Current.DisplayAlert("Błąd", "Wystąpił problem przy rezerwacji", "OK");
+            await Shell.Current.DisplayAlert("Błąd", "Wystąpił problem przy rezerwacji.", "OK");
         }
     }
 }
+
 
 

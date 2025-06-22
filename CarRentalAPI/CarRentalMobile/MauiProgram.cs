@@ -3,7 +3,9 @@ using CommunityToolkit.Mvvm;
 
 using CarRentalMobile.Services; 
 using CarRentalMobile.ViewModels; 
-using CarRentalMobile.Views; 
+using CarRentalMobile.Views;
+using CarRentalMobile.ViewModels;
+
 
 namespace CarRentalMobile
 {
@@ -38,7 +40,7 @@ namespace CarRentalMobile
 
             //builder.Services.AddSingleton<MainPage>();
 
-            builder.Services.AddTransient<ReservationsViewModel>();
+            builder.Services.AddTransient<ReservationViewModel>();
             builder.Services.AddTransient<ReservationPage>();
 
 
