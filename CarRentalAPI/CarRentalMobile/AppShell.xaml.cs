@@ -15,6 +15,8 @@ public partial class AppShell : Shell
 
         Routing.RegisterRoute(nameof(ReservationPage), typeof(ReservationPage));
 
+        Routing.RegisterRoute(nameof(ReservationPage), typeof(ReservationPage));
+
 
         // Tutaj możesz rejestrować inne trasy, np. dla strony rezerwacji
         // Routing.RegisterRoute(nameof(ReservationPage), typeof(ReservationPage));

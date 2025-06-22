@@ -1,54 +1,206 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Marta\\source\\repos\\CarRentalAPK\\CarRentalAPI\\",
+  "WorkspaceRootPath": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\marta\\source\\repos\\carrentalapk\\carrentalapi\\carrentalmobile\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\jhero\\onedrive\\pulpit\\carrental\\carrentalapi\\carrentalmobile\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\marta\\source\\repos\\carrentalapk\\carrentalapi\\carrentalmobile\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\jhero\\onedrive\\pulpit\\carrental\\carrentalapi\\carrentalmobile\\views\\reservationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\views\\reservationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\jhero\\onedrive\\pulpit\\carrental\\carrentalapi\\carrentalmobile\\views\\reservationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\views\\reservationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\jhero\\onedrive\\pulpit\\carrental\\carrentalapi\\carrentalmobile\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\jhero\\onedrive\\pulpit\\carrental\\carrentalapi\\carrentalmobile\\viewmodels\\reservationsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\viewmodels\\reservationsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\jhero\\onedrive\\pulpit\\carrental\\carrentalapi\\carrentalmobile\\viewmodels\\mainmenuviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\viewmodels\\mainmenuviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\jhero\\onedrive\\pulpit\\carrental\\carrentalapi\\carrentalmobile\\views\\mainmenupage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\views\\mainmenupage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\jhero\\onedrive\\pulpit\\carrental\\carrentalapi\\carrentalmobile\\views\\mainmenupage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\views\\mainmenupage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\jhero\\onedrive\\pulpit\\carrental\\carrentalapi\\carrentalmobile\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\jhero\\onedrive\\pulpit\\carrental\\carrentalapi\\carrentalmobile\\views\\citiespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\views\\citiespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\jhero\\onedrive\\pulpit\\carrental\\carrentalapi\\carrentalmobile\\views\\carspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\views\\carspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 100,
+      "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\App.xaml.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\App.xaml.cs",
+              "RelativeToolTip": "CarRentalMobile\\App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T15:26:02.967Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Car.cs",
-              "DocumentMoniker": "C:\\Users\\Marta\\source\\repos\\CarRentalAPK\\CarRentalAPI\\CarRentalMobile\\Models\\Car.cs",
-              "RelativeDocumentMoniker": "CarRentalMobile\\Models\\Car.cs",
-              "ToolTip": "C:\\Users\\Marta\\source\\repos\\CarRentalAPK\\CarRentalAPI\\CarRentalMobile\\Models\\Car.cs",
-              "RelativeToolTip": "CarRentalMobile\\Models\\Car.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\AppShell.xaml.cs*",
+              "RelativeToolTip": "CarRentalMobile\\AppShell.xaml.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T15:32:58.609Z",
+              "WhenOpened": "2025-06-22T12:28:50.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReservationPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\ReservationPage.xaml",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\ReservationPage.xaml",
+              "ToolTip": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\ReservationPage.xaml*",
+              "RelativeToolTip": "CarRentalMobile\\Views\\ReservationPage.xaml*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-22T13:02:01.109Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Reservation.cs",
-              "DocumentMoniker": "C:\\Users\\Marta\\source\\repos\\CarRentalAPK\\CarRentalAPI\\CarRentalMobile\\Models\\Reservation.cs",
-              "RelativeDocumentMoniker": "CarRentalMobile\\Models\\Reservation.cs",
-              "ToolTip": "C:\\Users\\Marta\\source\\repos\\CarRentalAPK\\CarRentalAPI\\CarRentalMobile\\Models\\Reservation.cs",
-              "RelativeToolTip": "CarRentalMobile\\Models\\Reservation.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAwwBgAAAAAAAAA",
+              "Title": "ReservationPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\ReservationPage.xaml.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\ReservationPage.xaml.cs",
+              "ToolTip": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\ReservationPage.xaml.cs*",
+              "RelativeToolTip": "CarRentalMobile\\Views\\ReservationPage.xaml.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-22T15:32:44.584Z",
+              "WhenOpened": "2025-06-22T13:06:34.078Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainMenuPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\MainMenuPage.xaml.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\MainMenuPage.xaml.cs",
+              "ToolTip": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\MainMenuPage.xaml.cs",
+              "RelativeToolTip": "CarRentalMobile\\Views\\MainMenuPage.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T12:22:33.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReservationsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\ViewModels\\ReservationsViewModel.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\ViewModels\\ReservationsViewModel.cs",
+              "ToolTip": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\ViewModels\\ReservationsViewModel.cs",
+              "RelativeToolTip": "CarRentalMobile\\ViewModels\\ReservationsViewModel.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAswC8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T13:04:44.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainMenuViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\ViewModels\\MainMenuViewModel.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\ViewModels\\MainMenuViewModel.cs",
+              "ToolTip": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\ViewModels\\MainMenuViewModel.cs",
+              "RelativeToolTip": "CarRentalMobile\\ViewModels\\MainMenuViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T13:16:25.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainMenuPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\MainMenuPage.xaml",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\MainMenuPage.xaml",
+              "ToolTip": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\MainMenuPage.xaml",
+              "RelativeToolTip": "CarRentalMobile\\Views\\MainMenuPage.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-22T12:21:15.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\MauiProgram.cs",
+              "RelativeToolTip": "CarRentalMobile\\MauiProgram.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAACoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T13:07:07.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CitiesPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CitiesPage.xaml",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\CitiesPage.xaml",
+              "ToolTip": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CitiesPage.xaml",
+              "RelativeToolTip": "CarRentalMobile\\Views\\CitiesPage.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-22T11:50:49.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CarsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CarsPage.xaml",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\CarsPage.xaml",
+              "ToolTip": "C:\\Users\\jhero\\OneDrive\\Pulpit\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CarsPage.xaml",
+              "RelativeToolTip": "CarRentalMobile\\Views\\CarsPage.xaml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAgAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-21T14:49:03.706Z",
+              "EditorCaption": ""
             }
           ]
         }
