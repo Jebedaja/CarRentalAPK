@@ -120,6 +120,9 @@ public partial class ReservationViewModel : ObservableObject
             CarId = SelectedCar.Id
         };
 
+        //  Debug: wypisz dane rezerwacji do konsoli
+        Console.WriteLine($"Rezerwacja: {JsonConvert.SerializeObject(reservation, Formatting.Indented)}");
+
         // 📡 Wysłanie POST do API
         var result = await _apiService.CreateReservationAsync(reservation);
 

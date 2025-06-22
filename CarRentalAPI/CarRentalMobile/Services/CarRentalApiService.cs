@@ -134,21 +134,18 @@ namespace CarRentalMobile.Services
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                 var response = await _httpClient.PostAsync($"{_baseUrl}Reservations", content);
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    var errorContent = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine($"Błąd POST: {response.StatusCode} - {errorContent}");
+                }
+
                 return response.IsSuccessStatusCode;
-            }
-            catch (HttpRequestException ex)
-            {
-                Console.WriteLine($"Błąd HTTP podczas tworzenia rezerwacji: {ex.Message}");
-                return false;
-            }
-            catch (JsonException ex)
-            {
-                Console.WriteLine($"Błąd serializacji JSON rezerwacji: {ex.Message}");
-                return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Nieoczekiwany błąd podczas tworzenia rezerwacji: {ex.Message}");
+                Console.WriteLine($"Wyjątek podczas POST: {ex.Message}");
                 return false;
             }
         }
