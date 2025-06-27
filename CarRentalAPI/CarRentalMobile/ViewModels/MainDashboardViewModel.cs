@@ -23,6 +23,7 @@ public partial class MainDashboardViewModel : ObservableObject
     async Task GoToReservations()
     {
         // absolutna nawigacja do ReservationsPage
-        await Shell.Current.GoToAsync("///ReservationsPage");
+        await Shell.Current.GoToAsync(nameof(ReservationsPage));
+
     }
 }
