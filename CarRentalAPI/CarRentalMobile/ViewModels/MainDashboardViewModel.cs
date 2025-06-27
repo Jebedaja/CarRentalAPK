@@ -23,4 +23,12 @@ public partial class MainDashboardViewModel : ObservableObject
     {
         await Shell.Current.GoToAsync(nameof(MyReservationsPage)); // Nawigacja do MyReservationsPage
     }
+
+    [RelayCommand]
+    async Task GoToReservations()
+    {
+        // Nawigacja do strony Moich Rezerwacji
+        await Shell.Current.GoToAsync(nameof(MyReservationsPage));
+        //System.Diagnostics.Debug.WriteLine("Navigating to MyReservationsPage.");
+    }
 }

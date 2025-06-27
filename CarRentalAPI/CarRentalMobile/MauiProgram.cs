@@ -40,6 +40,9 @@ namespace CarRentalMobile
             builder.Services.AddTransient<MyReservationsViewModel>(); // Nowe
             builder.Services.AddTransient<MyReservationsPage>();     // Nowe
 
+            builder.Services.AddTransient<ReservationDetailsViewModel>();
+            builder.Services.AddTransient<ReservationDetailsPage>();
+
             return builder.Build();
         }
     }

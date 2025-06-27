@@ -16,6 +16,8 @@ public partial class AppShell : Shell
 
         Routing.RegisterRoute(nameof(CitiesPage), typeof(CitiesPage));
 
+        Routing.RegisterRoute(nameof(ReservationDetailsPage), typeof(ReservationDetailsPage));
+
         // Jeśli MainDashboardPage jest initial ShellContent, nie musisz jej rejestrować tutaj
         // chyba że chcesz nawigować do niej z innych miejsc poza startem aplikacji.
 

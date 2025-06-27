@@ -25,14 +25,14 @@ namespace CarRentalAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Reservation>>> GetReservations()
         {
-            return await _context.Reservations.ToListAsync();
+            return await _context.Reservations.Include(r => r.Car).ToListAsync();
         }
 
         // GET: api/Reservations/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Reservation>> GetReservation(int id)
         {
-            var reservation = await _context.Reservations.FindAsync(id);
+            var reservation = await _context.Reservations.Include(r => r.Car).FirstOrDefaultAsync(r => r.Id == id);
 
             if (reservation == null)
             {
@@ -43,7 +43,6 @@ namespace CarRentalAPI.Controllers
         }
 
         // PUT: api/Reservations/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutReservation(int id, Reservation reservation)
         {
@@ -74,10 +73,25 @@ namespace CarRentalAPI.Controllers
         }
 
         // POST: api/Reservations
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Reservation>> PostReservation(Reservation reservation)
         {
+            // Dodaj walidację ModelState - zawsze dobra praktyka!
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            // Sprawdź istnienie samochodu
+            var carExists = await _context.Cars.AnyAsync(c => c.Id == reservation.CarId);
+            if (!carExists)
+            {
+                return BadRequest("Invalid CarId provided.");
+            }
+
+            // Logika dla klienta została usunięta
+            // Front-end będzie po prostu wysyłać FirstName, LastName, Age jako część Reservation
+
             _context.Reservations.Add(reservation);
             await _context.SaveChangesAsync();
 

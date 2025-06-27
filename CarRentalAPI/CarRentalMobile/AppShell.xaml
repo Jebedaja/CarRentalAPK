@@ -22,6 +22,10 @@
         ContentTemplate="{DataTemplate local:MyReservationsPage}"
         Route="MyReservationsPage"
         IsVisible="False" />
+    <ShellContent
+        Title="MyReservations"
+        ContentTemplate="{DataTemplate local:MyReservationsPage}"
+        Route="MyReservationsPage" />
     <Shell.Resources>
         <ResourceDictionary>
             <Style TargetType="Shell">

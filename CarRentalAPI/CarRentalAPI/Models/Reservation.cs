@@ -1,11 +1,14 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace CarRentalAPI.Models
 {
     public class Reservation
     {
         public int Id { get; set; } // Klucz główny
+        public decimal TotalCost { get; set; } // Całkowity koszt rezerwacji
+        public string Status { get; set; } = "Pending"; // Status rezerwacji (np. Pending, Confirmed, Cancelled)
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
@@ -20,12 +23,7 @@ namespace CarRentalAPI.Models
 
         // Klucz obcy do Car
         public int CarId { get; set; }
-        public Car Car { get; set; } // Obiekt Car (relacja)
+        public Car? Car { get; set; } // Obiekt Car (relacja)
 
-        // Klucz obcy do City (opcjonalnie, ale może być przydatne do filtrowania rezerwacji po mieście)
-        // Możemy go dodać, jeśli uznamy to za potrzebne później. Na razie zostawimy tylko CarId,
-        // a miasto pobierzemy przez Car.City.
-        // public int CityId { get; set; }
-        // public City City { get; set; }
     }
 }

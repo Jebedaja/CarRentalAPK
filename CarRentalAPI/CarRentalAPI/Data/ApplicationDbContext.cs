@@ -38,6 +38,7 @@ namespace CarRental.API.Data
                 .HasForeignKey(r => r.CarId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+
             // Dodanie początkowych danych (seed data) - przydatne do testowania
             modelBuilder.Entity<City>().HasData(
                 new City { Id = 1, Name = "Warszawa", ImageUrl = "https://carrentalapkstorage.blob.core.windows.net/images/warsaw.jpg" },
