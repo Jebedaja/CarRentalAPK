@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:CarRentalMobile.ViewModels"
+             x:Class="CarRentalMobile.Views.MyReservationsPage"
+             Title="Moje Rezerwacje">
+
+    <ContentPage.BindingContext>
+        <viewmodels:MyReservationsViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Padding="20" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="Tutaj będą Twoje rezerwacje" 
+               FontSize="Medium" 
+               HorizontalOptions="Center" />
+        <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"
+                           Color="{AppThemeBinding Light=Blue, Dark=LightBlue}" />
+    </VerticalStackLayout>
+</ContentPage>

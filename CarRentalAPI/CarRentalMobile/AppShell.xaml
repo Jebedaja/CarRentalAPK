@@ -8,12 +8,20 @@
     Title="CarRentalMobile">
 
     <ShellContent
+        Title="Start"
+        ContentTemplate="{DataTemplate local:MainDashboardPage}"
+        Route="MainDashboardPage" />
+
+    <ShellContent
         Title="Miasta"
         ContentTemplate="{DataTemplate local:CitiesPage}"
-        Route="CitiesPage" />
-    <Shell.FlyoutItems>
-    </Shell.FlyoutItems>
-
+        Route="CitiesPage"
+        IsVisible="False" />
+    <ShellContent
+        Title="Moje rezerwacje"
+        ContentTemplate="{DataTemplate local:MyReservationsPage}"
+        Route="MyReservationsPage"
+        IsVisible="False" />
     <Shell.Resources>
         <ResourceDictionary>
             <Style TargetType="Shell">

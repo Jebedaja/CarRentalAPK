@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
-using CommunityToolkit.Mvvm;
+using CommunityToolkit.Mvvm; // Upewnij się, że jest
 
-using CarRentalMobile.Services; 
-using CarRentalMobile.ViewModels; 
-using CarRentalMobile.Views; 
+using CarRentalMobile.Services;
+using CarRentalMobile.ViewModels;
+using CarRentalMobile.Views;
 
 namespace CarRentalMobile
 {
@@ -21,23 +21,24 @@ namespace CarRentalMobile
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
-
+            builder.Logging.AddDebug();
 #endif
 
             // singleton - jedna instancja na cala apke
             builder.Services.AddSingleton<CarRentalApiService>();
 
             // transient - zawsze nowa instancja gdy jest potrzebna
-            builder.Services.AddTransient<CitiesViewModel>();
+            builder.Services.AddTransient<MainDashboardViewModel>(); // Nowe
+            builder.Services.AddTransient<MainDashboardPage>();     // Nowe
 
+            builder.Services.AddTransient<CitiesViewModel>();
             builder.Services.AddTransient<CitiesPage>();
 
-            builder.Services.AddTransient<CarsViewModel>(); 
+            builder.Services.AddTransient<CarsViewModel>();
             builder.Services.AddTransient<CarsPage>();
 
-            //builder.Services.AddSingleton<MainPage>();
-
+            builder.Services.AddTransient<MyReservationsViewModel>(); // Nowe
+            builder.Services.AddTransient<MyReservationsPage>();     // Nowe
 
             return builder.Build();
         }

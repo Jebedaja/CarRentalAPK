@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:CarRentalMobile.ViewModels"
+             x:Class="CarRentalMobile.Views.MainDashboardPage"
+             Title="Wypożyczalnia Samochodów">
+
+    <ContentPage.BindingContext>
+        <viewmodels:MainDashboardViewModel />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="Auto, Auto, *" Padding="20" RowSpacing="20">
+
+        <Label Grid.Row="0"
+               Text="Witaj w CarRental!"
+               FontSize="Title"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,20,0,0" />
+
+        <VerticalStackLayout Grid.Row="1" Spacing="15" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+
+            <Frame Style="{StaticResource CardFrameStyle}">
+                <VerticalStackLayout Spacing="10">
+                    <Image Source="car_icon.png" 
+                           HeightRequest="80" 
+                           WidthRequest="80" 
+                           HorizontalOptions="Center" />
+                    <Label Text="Rezerwowanie" 
+                           FontSize="Large" 
+                           FontAttributes="Bold" 
+                           HorizontalOptions="Center" />
+                    <Label Text="Przeglądaj dostępne samochody i dokonaj rezerwacji." 
+                           FontSize="Small" 
+                           HorizontalOptions="Center" 
+                           HorizontalTextAlignment="Center" />
+                    <Button Text="Rezerwuj teraz" 
+                            Command="{Binding GoToCitiesCommand}" 
+                            Style="{StaticResource PrimaryButtonStyle}" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame Style="{StaticResource CardFrameStyle}">
+                <VerticalStackLayout Spacing="10">
+                    <Image Source="reservation_icon.png" 
+                           HeightRequest="80" 
+                           WidthRequest="80" 
+                           HorizontalOptions="Center" />
+                    <Label Text="Moje rezerwacje" 
+                           FontSize="Large" 
+                           FontAttributes="Bold" 
+                           HorizontalOptions="Center" />
+                    <Label Text="Zobacz i zarządzaj swoimi istniejącymi rezerwacjami." 
+                           FontSize="Small" 
+                           HorizontalOptions="Center" 
+                           HorizontalTextAlignment="Center" />
+                    <Button Text="Zobacz rezerwacje" 
+                            Command="{Binding GoToMyReservationsCommand}" 
+                            Style="{StaticResource SecondaryButtonStyle}" />
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

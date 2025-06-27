@@ -3,60 +3,80 @@
   "WorkspaceRootPath": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\views\\citiespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\views\\citiespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\appshell.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalapi\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|solutionrelative:carrentalapi\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalapi\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|solutionrelative:carrentalapi\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\services\\carrentalapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\services\\carrentalapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\viewmodels\\carsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\viewmodels\\carsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\viewmodels\\citiesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\viewmodels\\citiesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\viewmodels\\maindashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\viewmodels\\maindashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\viewmodels\\citiesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\viewmodels\\citiesviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\viewmodels\\carsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\viewmodels\\carsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\views\\myreservationspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\views\\myreservationspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\views\\maindashboardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\views\\maindashboardpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\resources\\styles\\colors.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\resources\\styles\\styles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\viewmodels\\myreservationsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\viewmodels\\myreservationsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\views\\myreservationspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\views\\myreservationspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\views\\maindashboardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\views\\maindashboardpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\mainpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\views\\citiespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\views\\citiespage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\views\\citiespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\views\\citiespage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\views\\carspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -65,6 +85,46 @@
     {
       "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\views\\carspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\views\\carspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\services\\carrentalapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\services\\carrentalapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalapi\\controllers\\reservationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|solutionrelative:carrentalapi\\controllers\\reservationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalapi\\controllers\\citiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|solutionrelative:carrentalapi\\controllers\\citiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalapi\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|solutionrelative:carrentalapi\\controllers\\carscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalmobile\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49D2DFC9-264C-4B3D-B0FE-4D22E4FB27D4}|CarRentalMobile\\CarRentalMobile.csproj|solutionrelative:carrentalmobile\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalapi\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|solutionrelative:carrentalapi\\models\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalapi\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|solutionrelative:carrentalapi\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|c:\\users\\gszym\\desktop\\carrental\\carrentalapi\\carrentalapi\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{838630A3-C654-4287-ABE6-7145F95CFE59}|CarRentalAPI\\CarRentalAPI.csproj|solutionrelative:carrentalapi\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,7 +134,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,145 +142,106 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApplicationDbContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "CarRentalAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "RelativeToolTip": "CarRentalAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAgwEkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T15:15:05.746Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CarsController.cs",
-              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Controllers\\CarsController.cs",
-              "RelativeDocumentMoniker": "CarRentalAPI\\Controllers\\CarsController.cs",
-              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Controllers\\CarsController.cs",
-              "RelativeToolTip": "CarRentalAPI\\Controllers\\CarsController.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAswHwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T15:13:49.544Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AppShell.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\AppShell.xaml.cs",
-              "RelativeDocumentMoniker": "CarRentalMobile\\AppShell.xaml.cs",
-              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\AppShell.xaml.cs",
-              "RelativeToolTip": "CarRentalMobile\\AppShell.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T14:54:44.447Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "AppShell.xaml",
               "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\AppShell.xaml",
               "RelativeDocumentMoniker": "CarRentalMobile\\AppShell.xaml",
               "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\AppShell.xaml",
               "RelativeToolTip": "CarRentalMobile\\AppShell.xaml",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAwCAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAAC8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-06-21T14:50:11.796Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\App.xaml.cs",
-              "RelativeDocumentMoniker": "CarRentalMobile\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\App.xaml.cs",
-              "RelativeToolTip": "CarRentalMobile\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T14:50:08.952Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\App.xaml",
-              "RelativeDocumentMoniker": "CarRentalMobile\\App.xaml",
-              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\App.xaml",
-              "RelativeToolTip": "CarRentalMobile\\App.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "Styles.xaml",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Resources\\Styles\\Styles.xaml",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Resources\\Styles\\Styles.xaml",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Resources\\Styles\\Styles.xaml",
+              "RelativeToolTip": "CarRentalMobile\\Resources\\Styles\\Styles.xaml",
+              "ViewState": "AgIAAKsBAAAAAAAAAAAAAMcBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-21T14:50:06.118Z",
+              "WhenOpened": "2025-06-26T23:28:01.65Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CitiesPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CitiesPage.xaml.cs",
-              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\CitiesPage.xaml.cs",
-              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CitiesPage.xaml.cs",
-              "RelativeToolTip": "CarRentalMobile\\Views\\CitiesPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T14:50:03.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CitiesPage.xaml",
-              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CitiesPage.xaml",
-              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\CitiesPage.xaml",
-              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CitiesPage.xaml",
-              "RelativeToolTip": "CarRentalMobile\\Views\\CitiesPage.xaml",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAACkAAAAOAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "Colors.xaml",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Resources\\Styles\\Colors.xaml",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Resources\\Styles\\Colors.xaml",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Resources\\Styles\\Colors.xaml",
+              "RelativeToolTip": "CarRentalMobile\\Resources\\Styles\\Colors.xaml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACoAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-21T14:49:08.31Z",
+              "WhenOpened": "2025-06-26T23:28:35.554Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CarsPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CarsPage.xaml.cs",
-              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\CarsPage.xaml.cs",
-              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CarsPage.xaml.cs",
-              "RelativeToolTip": "CarRentalMobile\\Views\\CarsPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T14:49:05.71Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CarsPage.xaml",
-              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CarsPage.xaml",
-              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\CarsPage.xaml",
-              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CarsPage.xaml",
-              "RelativeToolTip": "CarRentalMobile\\Views\\CarsPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-21T14:49:03.706Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "CitiesViewModel.cs",
               "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\ViewModels\\CitiesViewModel.cs",
               "RelativeDocumentMoniker": "CarRentalMobile\\ViewModels\\CitiesViewModel.cs",
               "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\ViewModels\\CitiesViewModel.cs",
               "RelativeToolTip": "CarRentalMobile\\ViewModels\\CitiesViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAA9wDkAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-21T14:45:04.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MyReservationsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\MyReservationsPage.xaml.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\MyReservationsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\MyReservationsPage.xaml.cs",
+              "RelativeToolTip": "CarRentalMobile\\Views\\MyReservationsPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T23:24:22.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppShell.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\AppShell.xaml.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\AppShell.xaml.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\AppShell.xaml.cs",
+              "RelativeToolTip": "CarRentalMobile\\AppShell.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T14:54:44.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainDashboardViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\ViewModels\\MainDashboardViewModel.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\ViewModels\\MainDashboardViewModel.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\ViewModels\\MainDashboardViewModel.cs",
+              "RelativeToolTip": "CarRentalMobile\\ViewModels\\MainDashboardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T23:21:49.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\MauiProgram.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\MauiProgram.cs",
+              "RelativeToolTip": "CarRentalMobile\\MauiProgram.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwC0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T14:54:52.502Z",
               "EditorCaption": ""
             },
             {
@@ -231,61 +252,295 @@
               "RelativeDocumentMoniker": "CarRentalMobile\\ViewModels\\CarsViewModel.cs",
               "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\ViewModels\\CarsViewModel.cs",
               "RelativeToolTip": "CarRentalMobile\\ViewModels\\CarsViewModel.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAUwEIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-21T14:44:57.919Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\App.xaml",
+              "RelativeDocumentMoniker": "CarRentalMobile\\App.xaml",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\App.xaml",
+              "RelativeToolTip": "CarRentalMobile\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-21T14:50:06.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MyReservationsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\MyReservationsPage.xaml",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\MyReservationsPage.xaml",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\MyReservationsPage.xaml",
+              "RelativeToolTip": "CarRentalMobile\\Views\\MyReservationsPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-26T23:24:00.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MyReservationsViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\ViewModels\\MyReservationsViewModel.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\ViewModels\\MyReservationsViewModel.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\ViewModels\\MyReservationsViewModel.cs",
+              "RelativeToolTip": "CarRentalMobile\\ViewModels\\MyReservationsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T23:25:08.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainDashboardPage.xaml",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\MainDashboardPage.xaml",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\MainDashboardPage.xaml",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\MainDashboardPage.xaml",
+              "RelativeToolTip": "CarRentalMobile\\Views\\MainDashboardPage.xaml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-26T23:20:10.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MainDashboardPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\MainDashboardPage.xaml.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\MainDashboardPage.xaml.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\MainDashboardPage.xaml.cs",
+              "RelativeToolTip": "CarRentalMobile\\Views\\MainDashboardPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T23:20:42.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MainPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\MainPage.xaml.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\MainPage.xaml.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\MainPage.xaml.cs",
+              "RelativeToolTip": "CarRentalMobile\\MainPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T23:09:51.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CarsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CarsPage.xaml.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\CarsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CarsPage.xaml.cs",
+              "RelativeToolTip": "CarRentalMobile\\Views\\CarsPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T14:49:05.71Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CitiesPage.xaml",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CitiesPage.xaml",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\CitiesPage.xaml",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CitiesPage.xaml",
+              "RelativeToolTip": "CarRentalMobile\\Views\\CitiesPage.xaml",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAACkAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-21T14:49:08.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CitiesPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CitiesPage.xaml.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\CitiesPage.xaml.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CitiesPage.xaml.cs",
+              "RelativeToolTip": "CarRentalMobile\\Views\\CitiesPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T14:50:03.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CarsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CarsPage.xaml",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Views\\CarsPage.xaml",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Views\\CarsPage.xaml",
+              "RelativeToolTip": "CarRentalMobile\\Views\\CarsPage.xaml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-21T14:49:03.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\App.xaml.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\App.xaml.cs",
+              "RelativeToolTip": "CarRentalMobile\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T14:50:08.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\MainPage.xaml",
+              "RelativeDocumentMoniker": "CarRentalMobile\\MainPage.xaml",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\MainPage.xaml",
+              "RelativeToolTip": "CarRentalMobile\\MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-06-21T14:28:51.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
               "Title": "CarRentalApiService.cs",
               "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Services\\CarRentalApiService.cs",
               "RelativeDocumentMoniker": "CarRentalMobile\\Services\\CarRentalApiService.cs",
               "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Services\\CarRentalApiService.cs",
               "RelativeToolTip": "CarRentalMobile\\Services\\CarRentalApiService.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAAiwHEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAUwHEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-21T14:44:52.998Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MauiProgram.cs",
-              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\MauiProgram.cs",
-              "RelativeDocumentMoniker": "CarRentalMobile\\MauiProgram.cs",
-              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\MauiProgram.cs",
-              "RelativeToolTip": "CarRentalMobile\\MauiProgram.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "ReservationsController.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Controllers\\ReservationsController.cs",
+              "RelativeDocumentMoniker": "CarRentalAPI\\Controllers\\ReservationsController.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Controllers\\ReservationsController.cs",
+              "RelativeToolTip": "CarRentalAPI\\Controllers\\ReservationsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T14:54:52.502Z",
+              "WhenOpened": "2025-06-26T23:00:47.644Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 23,
+              "Title": "CitiesController.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Controllers\\CitiesController.cs",
+              "RelativeDocumentMoniker": "CarRentalAPI\\Controllers\\CitiesController.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Controllers\\CitiesController.cs",
+              "RelativeToolTip": "CarRentalAPI\\Controllers\\CitiesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T23:00:22.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CarsController.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Controllers\\CarsController.cs",
+              "RelativeDocumentMoniker": "CarRentalAPI\\Controllers\\CarsController.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Controllers\\CarsController.cs",
+              "RelativeToolTip": "CarRentalAPI\\Controllers\\CarsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T15:13:49.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Models\\Reservation.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Models\\Reservation.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Models\\Reservation.cs",
+              "RelativeToolTip": "CarRentalMobile\\Models\\Reservation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T22:54:43.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Models\\Car.cs",
+              "RelativeDocumentMoniker": "CarRentalMobile\\Models\\Car.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Models\\Car.cs",
+              "RelativeToolTip": "CarRentalMobile\\Models\\Car.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T22:54:41.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Models\\Reservation.cs",
+              "RelativeDocumentMoniker": "CarRentalAPI\\Models\\Reservation.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Models\\Reservation.cs",
+              "RelativeToolTip": "CarRentalAPI\\Models\\Reservation.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T22:45:00.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Car.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Models\\Car.cs",
+              "RelativeDocumentMoniker": "CarRentalAPI\\Models\\Car.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Models\\Car.cs",
+              "RelativeToolTip": "CarRentalAPI\\Models\\Car.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T22:44:57.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "CarRentalAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "CarRentalAPI\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAgwE0AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T15:15:05.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "City.cs",
               "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Models\\City.cs",
               "RelativeDocumentMoniker": "CarRentalMobile\\Models\\City.cs",
               "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\Models\\City.cs",
               "RelativeToolTip": "CarRentalMobile\\Models\\City.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-21T15:03:17.76Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\MainPage.xaml",
-              "RelativeDocumentMoniker": "CarRentalMobile\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\GSzym\\Desktop\\CarRental\\CarRentalAPI\\CarRentalMobile\\MainPage.xaml",
-              "RelativeToolTip": "CarRentalMobile\\MainPage.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-21T14:28:51.536Z",
               "EditorCaption": ""
             }
           ]
