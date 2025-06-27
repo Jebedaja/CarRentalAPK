@@ -41,7 +41,7 @@ namespace CarRentalMobile.ViewModels
 
                 bool confirm = await Shell.Current.DisplayAlert(
                     "Usuń",
-                    $"Na pewno usunąć rezerwację #{reservation.Id}?",
+                    $"Na pewno usunąć rezerwację?",
                     "Tak",
                     "Nie");
 

@@ -41,14 +41,12 @@
 
                                 <!-- Dane rezerwacji -->
                                 <VerticalStackLayout Spacing="5" Grid.Row="0">
-                                    <Label Text="{Binding Id, StringFormat='ID: {0}'}" FontAttributes="Bold"/>
                                     <Label Text="{Binding Car.Brand, StringFormat='Marka: {0}', TargetNullValue='Brak danych'}"/>
                                     <Label Text="{Binding Car.Model, StringFormat='Model: {0}', TargetNullValue='Brak danych'}"/>
                                     <Label Text="{Binding StartDate, StringFormat='Od: {0:yyyy-MM-dd}'}"/>
                                     <Label Text="{Binding EndDate, StringFormat='Do: {0:yyyy-MM-dd}'}"/>
                                     <Label Text="{Binding RentalDays, StringFormat='Dni: {0}'}"/>
                                     <Label Text="{Binding TotalCost, StringFormat='Całkowity koszt: {0:C}'}"/>
-                                    <Label Text="{Binding Status, StringFormat='Status: {0}'}"/>
                                     <Label>
                                         <Label.FormattedText>
                                             <FormattedString>
