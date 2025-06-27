@@ -1,21 +1,29 @@
+using CarRentalMobile.Services;
 using CarRentalMobile.ViewModels;
+using Microsoft.Maui.Controls;
 
-namespace CarRentalMobile.Views;
-
-public partial class MyReservationsPage : ContentPage
+namespace CarRentalMobile.Views
 {
-    public MyReservationsPage(MyReservationsViewModel viewModel)
+    public partial class MyReservationsPage : ContentPage
     {
-        InitializeComponent();
-        BindingContext = viewModel; // Ustawienie kontekstu danych
-    }
+        private readonly MyReservationsViewModel viewModel;
 
-    // Dodaj to zdarzenie, aby wywo³aæ metodê ViewModelu po pojawieniu siê strony
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-        if (BindingContext is MyReservationsViewModel viewModel)
+        public MyReservationsPage()
         {
+            InitializeComponent();
+
+            // Tworzymy serwis i ViewModel
+            var apiService = new CarRentalApiService();
+            viewModel = new MyReservationsViewModel(apiService);
+
+            // Przypisujemy kontekst danych
+            BindingContext = viewModel;
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            // Wywo³ujemy za³adowanie rezerwacji
             viewModel.OnAppearing();
         }
     }

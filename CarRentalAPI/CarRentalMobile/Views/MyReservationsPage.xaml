@@ -1,42 +1,56 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CarRentalMobile.Views.MyReservationsPage"
-             xmlns:vm="clr-namespace:CarRentalMobile.ViewModels"
-             Title="Moje Rezerwacje">
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:CarRentalMobile.Models"
+    x:Class="CarRentalMobile.Views.MyReservationsPage"
+    Title="Moje Rezerwacje">
 
-    <ContentPage.Content>
+    <ScrollView>
         <VerticalStackLayout Spacing="10" Padding="20">
-            <Label Text="Twoje Aktywne Rezerwacje" 
-                   FontSize="Large" 
-                   FontAttributes="Bold" 
-                   HorizontalOptions="Center" 
-                   Margin="0,0,0,10"/>
 
-            <RefreshView Command="{Binding LoadReservationsCommand}" 
-                         IsRefreshing="{Binding IsBusy}">
-                <CollectionView ItemsSource="{Binding Reservations}" 
-                                EmptyView="{Binding EmptyListMessage}">
+            <!-- Nagłówek -->
+            <Label
+        Text="Twoje Aktywne Rezerwacje"
+        FontSize="Large"
+        FontAttributes="Bold"
+        HorizontalOptions="Center"
+        Margin="0,0,0,10" />
+
+            <!-- Odświeżalna lista rezerwacji -->
+            <RefreshView
+        Command="{Binding LoadReservationsCommand}"
+        IsRefreshing="{Binding IsBusy}">
+                <CollectionView
+          ItemsSource="{Binding Reservations}"
+          EmptyView="{Binding EmptyListMessage}"
+          VerticalOptions="FillAndExpand">
+
                     <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Frame Margin="5" Padding="10" CornerRadius="10" BorderColor="LightGray" HasShadow="True">
+                        <DataTemplate x:DataType="models:Reservation">
+                            <Frame
+                Margin="5"
+                Padding="10"
+                CornerRadius="10"
+                BorderColor="LightGray"
+                HasShadow="True">
                                 <VerticalStackLayout Spacing="5">
-                                    <Label Text="{Binding Car.Brand, StringFormat='Marka: {0}', TargetNullValue='Brak danych'}"
-                   FontSize="Medium" FontAttributes="Bold"/>
-                                    <Label Text="{Binding Car.Model, StringFormat='Model: {0}', TargetNullValue='Brak danych'}"
-                   FontSize="Medium"/>
-                                    <Label Text="{Binding StartDate, StringFormat='Od: {0:yyyy-MM-dd}'}"/>
-                                    <Label Text="{Binding EndDate, StringFormat='Do: {0:yyyy-MM-dd}'}"/>
-                                    <Label Text="{Binding RentalDays, StringFormat='Dni: {0}'}"/>
-                                    <Label Text="{Binding TotalCost, StringFormat='Całkowity koszt: {0:C}'}"/>
-                                    <Label Text="{Binding Status, StringFormat='Status: {0}'}"/>
+                                    <Label Text="{Binding Id, StringFormat='ID: {0}'}"
+                         FontAttributes="Bold" />
+                                    <Label Text="{Binding Car.Brand, StringFormat='Marka: {0}', TargetNullValue='Brak danych'}" />
+                                    <Label Text="{Binding Car.Model, StringFormat='Model: {0}', TargetNullValue='Brak danych'}" />
+                                    <Label Text="{Binding StartDate, StringFormat='Od: {0:yyyy-MM-dd}'}" />
+                                    <Label Text="{Binding EndDate, StringFormat='Do: {0:yyyy-MM-dd}'}" />
+                                    <Label Text="{Binding RentalDays, StringFormat='Dni: {0}'}" />
+                                    <Label Text="{Binding TotalCost, StringFormat='Całkowity koszt: {0:C}'}" />
+                                    <Label Text="{Binding Status, StringFormat='Status: {0}'}" />
                                     <Label>
                                         <Label.FormattedText>
                                             <FormattedString>
-                                                <Span Text="Rezerwujący: "/>
-                                                <Span Text="{Binding FirstName}"/>
-                                                <Span Text=" "/>
-                                                <Span Text="{Binding LastName}"/>
+                                                <Span Text="Rezerwujący: " />
+                                                <Span Text="{Binding FirstName}" />
+                                                <Span Text=" " />
+                                                <Span Text="{Binding LastName}" />
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
@@ -44,13 +58,17 @@
                             </Frame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
+
                 </CollectionView>
             </RefreshView>
 
-            <ActivityIndicator IsRunning="{Binding IsBusy}" 
-                               IsVisible="{Binding IsBusy}" 
-                               HorizontalOptions="Center" 
-                               VerticalOptions="CenterAndExpand"/>
+            <!-- Loader -->
+            <ActivityIndicator
+        IsRunning="{Binding IsBusy}"
+        IsVisible="{Binding IsBusy}"
+        HorizontalOptions="Center"
+        VerticalOptions="CenterAndExpand" />
+
         </VerticalStackLayout>
-    </ContentPage.Content>
+    </ScrollView>
 </ContentPage>

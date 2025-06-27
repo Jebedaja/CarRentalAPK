@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Name="ThisPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:vm="clr-namespace:CarRentalMobile.ViewModels"
+    xmlns:models="clr-namespace:CarRentalMobile.Models"
+    x:Class="CarRentalMobile.Views.ReservationsPage"
+    Title="Moje Rezerwacje"
+    NavigationPage.HasBackButton="True"
+    NavigationPage.HasNavigationBar="True">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10">
+
+            <!-- Nagłówek z liczbą rezerwacji -->
+            <Label
+        Text="{Binding Reservations.Count, StringFormat='Ilość rezerwacji: {0}'}"
+        FontSize="Large"
+        TextColor="Blue" />
+
+            <!-- Lista rezerwacji -->
+            <CollectionView
+        ItemsSource="{Binding Reservations}"
+        VerticalOptions="FillAndExpand">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Reservation">
+                        <Frame
+              Margin="5"
+              Padding="10"
+              CornerRadius="10"
+              BorderColor="LightGray"
+              HasShadow="True">
+
+                            <!-- Siatka: dane + przycisk -->
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+
+                                <!-- Dane rezerwacji -->
+                                <VerticalStackLayout Spacing="5" Grid.Row="0">
+                                    <Label Text="{Binding Id, StringFormat='ID: {0}'}" FontAttributes="Bold"/>
+                                    <Label Text="{Binding Car.Brand, StringFormat='Marka: {0}', TargetNullValue='Brak danych'}"/>
+                                    <Label Text="{Binding Car.Model, StringFormat='Model: {0}', TargetNullValue='Brak danych'}"/>
+                                    <Label Text="{Binding StartDate, StringFormat='Od: {0:yyyy-MM-dd}'}"/>
+                                    <Label Text="{Binding EndDate, StringFormat='Do: {0:yyyy-MM-dd}'}"/>
+                                    <Label Text="{Binding RentalDays, StringFormat='Dni: {0}'}"/>
+                                    <Label Text="{Binding TotalCost, StringFormat='Całkowity koszt: {0:C}'}"/>
+                                    <Label Text="{Binding Status, StringFormat='Status: {0}'}"/>
+                                    <Label>
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="Rezerwujący: "/>
+                                                <Span Text="{Binding FirstName}"/>
+                                                <Span Text=" "/>
+                                                <Span Text="{Binding LastName}"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                </VerticalStackLayout>
+
+                                <!-- Przycisk Usuń -->
+                                <Button
+                  Grid.Row="1"
+                  Text="🗑️ Usuń"
+                  HorizontalOptions="End"
+                  BackgroundColor="Transparent"
+                  TextColor="LightCoral"
+                  Command="{Binding BindingContext.DeleteReservationCommand, Source={x:Reference ThisPage}}"
+                  CommandParameter="{Binding .}" />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

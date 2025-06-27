@@ -9,26 +9,20 @@ public partial class MainDashboardViewModel : ObservableObject
 {
     public MainDashboardViewModel()
     {
-        // Tutaj możesz dodać logikę inicjalizacji, jeśli będzie potrzebna
+        // inicjalizacja jeśli potrzebna
     }
 
     [RelayCommand]
     async Task GoToCities()
     {
-        await Shell.Current.GoToAsync(nameof(CitiesPage)); // Nawigacja do CitiesPage
-    }
-
-    [RelayCommand]
-    async Task GoToMyReservations()
-    {
-        await Shell.Current.GoToAsync(nameof(MyReservationsPage)); // Nawigacja do MyReservationsPage
+        // pozostaje bez zmian
+        await Shell.Current.GoToAsync(nameof(CitiesPage));
     }
 
     [RelayCommand]
     async Task GoToReservations()
     {
-        // Nawigacja do strony Moich Rezerwacji
-        await Shell.Current.GoToAsync(nameof(MyReservationsPage));
-        //System.Diagnostics.Debug.WriteLine("Navigating to MyReservationsPage.");
+        // absolutna nawigacja do ReservationsPage
+        await Shell.Current.GoToAsync("///ReservationsPage");
     }
 }

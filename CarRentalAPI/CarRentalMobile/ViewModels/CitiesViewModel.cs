@@ -1,4 +1,7 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿// ✅ Dodane dla lokalizacji:
+using Microsoft.Maui.Devices.Sensors;
+using Microsoft.Maui.ApplicationModel;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using CarRentalMobile.Models;
@@ -44,18 +47,13 @@ namespace CarRentalMobile.ViewModels
                 return;
 
             // Ustaw SelectedCity (wygenerowaną właściwość) - to spowoduje aktualizację CanNavigateToCars
-            // Ważne, aby upewnić się, że GoToCarsCommand.CanExecuteChanged jest wywołane
-            // ale w tym scenariuszu, po wykonaniu komendy, zwykle nie ma to wpływu na wizualny stan elementu listy
             SelectedCity = selectedCityFromTap; // Ustaw wygenerowaną właściwość
 
             await Shell.Current.GoToAsync($"CarsPage?cityId={selectedCityFromTap.Id}&cityName={selectedCityFromTap.Name}");
 
-            // Możesz zresetować selectedCity po nawigacji, jeśli chcesz, aby element nie był już "wybrany"
-            // jeśli nie ma to znaczenia dla UI, można pominąć.
             SelectedCity = null;
         }
 
-        // ... (reszta metody LoadCitiesAsync bez zmian)
         private async Task LoadCitiesAsync()
         {
             if (IsBusy)
@@ -67,15 +65,127 @@ namespace CarRentalMobile.ViewModels
                 Cities.Clear();
                 var fetchedCities = await _apiService.GetCitiesAsync();
 
+                // 🔽 PRZYKŁADOWE przypisanie współrzędnych – zakładamy, że nie przychodzą z backendu
                 foreach (var city in fetchedCities)
                 {
+                    switch (city.Name.ToLower())
+                    {
+                        case "warszawa":
+                            city.Latitude = 52.2297;
+                            city.Longitude = 21.0122;
+                            break;
+                        case "krakow":
+                            city.Latitude = 50.0647;
+                            city.Longitude = 19.9450;
+                            break;
+                        case "gdańsk":
+                        case "gdansk":
+                            city.Latitude = 54.3961; // 📍Twoje dokładne współrzędne
+                            city.Longitude = 18.5977;
+                            break;
+                    }
                     Cities.Add(city);
                 }
+
+                // 🔽 Dodano: po załadowaniu miast, uruchamiamy lokalizację
+                await DetectAndShowLocationAsync();
             }
             finally
             {
                 IsBusy = false;
             }
         }
+
+        public async Task DetectAndShowLocationAsync()
+        {
+            try
+            {
+                var permissionStatus = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
+                if (permissionStatus != PermissionStatus.Granted)
+                {
+                    permissionStatus = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
+                }
+
+                if (permissionStatus != PermissionStatus.Granted)
+                {
+                    await Shell.Current.DisplayAlert("Błąd", "Brak zgody na dostęp do lokalizacji.", "OK");
+                    return;
+                }
+
+                var location = await Geolocation.GetLastKnownLocationAsync();
+                if (location == null)
+                {
+                    location = await Geolocation.GetLocationAsync(new GeolocationRequest
+                    {
+                        DesiredAccuracy = GeolocationAccuracy.Medium,
+                        Timeout = TimeSpan.FromSeconds(10)
+                    });
+                }
+
+                if (location != null)
+                {
+                    var nearestCity = FindNearestCity(location.Latitude, location.Longitude);
+
+                    if (nearestCity != null)
+                    {
+                        double distance = GetDistance(location.Latitude, location.Longitude, nearestCity.Latitude, nearestCity.Longitude);
+
+                        await Shell.Current.DisplayAlert(
+                            "Lokalizacja",
+                            $"Najbliższe miasto z flotą: {nearestCity.Name}\nOdległość: {distance:F1} km",
+                            "OK"
+                        );
+                    }
+                    else
+                    {
+                        await Shell.Current.DisplayAlert("Błąd", "Nie znaleziono miasta z flotą.", "OK");
+                    }
+                }
+                else
+                {
+                    await Shell.Current.DisplayAlert("Błąd", "Nie udało się uzyskać lokalizacji.", "OK");
+                }
+            }
+            catch (Exception ex)
+            {
+                await Shell.Current.DisplayAlert("Błąd", $"Wystąpił problem z lokalizacją: {ex.Message}", "OK");
+            }
+        }
+
+        private City? FindNearestCity(double lat, double lon)
+        {
+            City? nearestCity = null;
+            double minDistance = double.MaxValue;
+
+            foreach (var city in Cities)
+            {
+                if (city.Latitude != 0 && city.Longitude != 0)
+                {
+                    var distance = GetDistance(lat, lon, city.Latitude, city.Longitude);
+                    if (distance < minDistance)
+                    {
+                        minDistance = distance;
+                        nearestCity = city;
+                    }
+                }
+            }
+
+            return nearestCity;
+        }
+
+        private double GetDistance(double lat1, double lon1, double lat2, double lon2)
+        {
+            const double R = 6371; // promień Ziemi w km
+            var dLat = DegreesToRadians(lat2 - lat1);
+            var dLon = DegreesToRadians(lon2 - lon1);
+            var a =
+                Math.Sin(dLat / 2) * Math.Sin(dLat / 2) +
+                Math.Cos(DegreesToRadians(lat1)) * Math.Cos(DegreesToRadians(lat2)) *
+                Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
+            var c = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
+            return R * c;
+        }
+
+        private double DegreesToRadians(double deg) => deg * (Math.PI / 180);
     }
 }

@@ -17,15 +17,12 @@
         ContentTemplate="{DataTemplate local:CitiesPage}"
         Route="CitiesPage"
         IsVisible="False" />
+
     <ShellContent
-        Title="Moje rezerwacje"
-        ContentTemplate="{DataTemplate local:MyReservationsPage}"
-        Route="MyReservationsPage"
-        IsVisible="False" />
-    <ShellContent
-        Title="MyReservations"
-        ContentTemplate="{DataTemplate local:MyReservationsPage}"
-        Route="MyReservationsPage" />
+    Title="Moje Rezerwacje"
+    Route="ReservationsPage"
+    ContentTemplate="{DataTemplate local:ReservationsPage}" />
+
     <Shell.Resources>
         <ResourceDictionary>
             <Style TargetType="Shell">

@@ -155,7 +155,19 @@ namespace CarRentalMobile.Services
                 return null;
             }
         }
-
+        public async Task<bool> DeleteReservationAsync(int reservationId)
+        {
+            try
+            {
+                var response = await _httpClient.DeleteAsync($"{_baseUrl}Reservations/{reservationId}");
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Błąd podczas usuwania rezerwacji {reservationId}: {ex.Message}");
+                return false;
+            }
+        }
         public async Task<ObservableCollection<Reservation>> GetReservationsAsync()
         {
             try

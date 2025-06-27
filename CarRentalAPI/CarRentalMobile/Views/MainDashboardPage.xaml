@@ -51,7 +51,7 @@
                            HorizontalOptions="Center" 
                            HorizontalTextAlignment="Center" />
                     <Button Text="Zobacz rezerwacje" 
-                            Command="{Binding GoToMyReservationsCommand}" 
+                            Command="{Binding GoToReservationsCommand}" 
                             Style="{StaticResource SecondaryButtonStyle}" />
                 </VerticalStackLayout>
             </Frame>
