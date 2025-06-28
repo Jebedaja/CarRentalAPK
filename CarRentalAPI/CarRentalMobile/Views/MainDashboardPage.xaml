@@ -5,57 +5,86 @@
              x:Class="CarRentalMobile.Views.MainDashboardPage"
              Title="Wypożyczalnia Samochodów">
 
-    <Grid RowDefinitions="Auto, Auto, *" Padding="20" RowSpacing="20">
+    <ContentPage.BindingContext>
+        <viewmodels:MainDashboardViewModel />
+    </ContentPage.BindingContext>
 
-        <Label Grid.Row="0"
-               Text="Witaj w CarRental!"
-               FontSize="Title"
-               FontAttributes="Bold"
-               HorizontalOptions="Center"
-               Margin="0,20,0,0" />
+    <!-- Dodano ScrollView, żeby całość była przewijalna na mniejszych ekranach -->
+    <ScrollView>
+        <Grid RowDefinitions="Auto, Auto, *" Padding="20" RowSpacing="20">
 
-        <VerticalStackLayout Grid.Row="1" Spacing="15" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Label Grid.Row="0"
+                   Text="Witaj w CarRental!"
+                   FontSize="Title"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,0" />
 
-            <Frame Style="{StaticResource CardFrameStyle}">
-                <VerticalStackLayout Spacing="10">
-                    <Image Source="car_icon.png" 
-                           HeightRequest="80" 
-                           WidthRequest="80" 
-                           HorizontalOptions="Center" />
-                    <Label Text="Rezerwowanie" 
-                           FontSize="Large" 
-                           FontAttributes="Bold" 
-                           HorizontalOptions="Center" />
-                    <Label Text="Przeglądaj dostępne samochody i dokonaj rezerwacji." 
-                           FontSize="Small" 
-                           HorizontalOptions="Center" 
-                           HorizontalTextAlignment="Center" />
-                    <Button Text="Rezerwuj teraz" 
-                            Command="{Binding GoToCitiesCommand}" 
-                            Style="{StaticResource PrimaryButtonStyle}" />
-                </VerticalStackLayout>
-            </Frame>
+            <VerticalStackLayout Grid.Row="1"
+                                 Spacing="15"
+                                 HorizontalOptions="CenterAndExpand"
+                                 VerticalOptions="CenterAndExpand">
 
-            <Frame Style="{StaticResource CardFrameStyle}">
-                <VerticalStackLayout Spacing="10">
-                    <Image Source="reservation_icon.png" 
-                           HeightRequest="80" 
-                           WidthRequest="80" 
-                           HorizontalOptions="Center" />
-                    <Label Text="Moje rezerwacje" 
-                           FontSize="Large" 
-                           FontAttributes="Bold" 
-                           HorizontalOptions="Center" />
-                    <Label Text="Zobacz i zarządzaj swoimi istniejącymi rezerwacjami." 
-                           FontSize="Small" 
-                           HorizontalOptions="Center" 
-                           HorizontalTextAlignment="Center" />
-                    <Button Text="Zobacz rezerwacje" 
-                            Command="{Binding GoToReservationsCommand}" 
-                            Style="{StaticResource SecondaryButtonStyle}" />
-                </VerticalStackLayout>
-            </Frame>
+                <Frame Style="{StaticResource CardFrameStyle}">
+                    <VerticalStackLayout Spacing="10">
+                        <Label Text="🚗"
+                               FontSize="50"
+                               HorizontalOptions="Center" />
+                        <Label Text="Rezerwowanie"
+                               FontSize="Large"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center" />
+                        <Label Text="Przeglądaj dostępne samochody i dokonaj rezerwacji."
+                               FontSize="Small"
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center" />
+                        <Button Text="Rezerwuj teraz"
+                                Command="{Binding GoToCitiesCommand}"
+                                Style="{StaticResource PrimaryButtonStyle}" />
+                    </VerticalStackLayout>
+                </Frame>
 
-        </VerticalStackLayout>
-    </Grid>
+                <Frame Style="{StaticResource CardFrameStyle}">
+                    <VerticalStackLayout Spacing="10">
+                        <Label Text="📋"
+                               FontSize="50"
+                               HorizontalOptions="Center" />
+                        <Label Text="Moje rezerwacje"
+                               FontSize="Large"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center" />
+                        <Label Text="Zobacz i zarządzaj swoimi istniejącymi rezerwacjami."
+                               FontSize="Small"
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center" />
+                        <Button Text="Zobacz rezerwacje"
+                                Command="{Binding GoToReservationsCommand}"
+                                Style="{StaticResource SecondaryButtonStyle}" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Zadzwoń do nas -->
+                <Frame Style="{StaticResource CardFrameStyle}">
+                    <VerticalStackLayout Spacing="10">
+                        <Label Text="📞"
+                               FontSize="50"
+                               HorizontalOptions="Center" />
+                        <Label Text="Zadzwoń do nas"
+                               FontSize="Large"
+                               FontAttributes="Bold"
+                               HorizontalOptions="Center" />
+                        <Label Text="Skontaktuj się z obsługą klienta w razie pytań."
+                               FontSize="Small"
+                               HorizontalOptions="Center"
+                               HorizontalTextAlignment="Center" />
+                        <Button Text="Zadzwoń"
+                                Command="{Binding CallUsCommand}"
+                                Style="{StaticResource SecondaryButtonStyle}" />
+                    </VerticalStackLayout>
+                </Frame>
+
+            </VerticalStackLayout>
+
+        </Grid>
+    </ScrollView>
 </ContentPage>
