@@ -1,36 +1,31 @@
 ﻿using CarRentalMobile.Models;
-// Usunięto: using Newtonsoft.Json; // <-- USUWAMY TĄ LINIĘ
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
-using System.Net.Http.Json; // Używamy tego do ReadFromJsonAsync i PostAsJsonAsync
+using System.Net.Http.Json; 
 using System.Text;
 using System.Diagnostics;
 using System.Threading.Tasks;
-using System.Text.Json; // <-- DODAJEMY TEN USING, jeśli będziesz chciał ręcznie opcje serializera
+using System.Text.Json; 
 
 namespace CarRentalMobile.Services
 {
-    public class CarRentalApiService
+    public class CarRentalApiService   // polaczenie z backendem
     {
         private readonly string _baseUrl = "https://carrentalbackend-ug-e9gtefcjaubeffev.germanywestcentral-01.azurewebsites.net/api/";
         private readonly HttpClient _httpClient;
 
-        // Opcjonalnie: Jeśli potrzebujesz niestandardowych opcji dla System.Text.Json (np. CamelCasePropertyNamingPolicy)
-        // private readonly JsonSerializerOptions _jsonSerializerOptions;
-
         public CarRentalApiService()
         {
             _httpClient = new HttpClient();
-            // Jeśli potrzebujesz niestandardowych opcji, np. do obsługi nazw właściwości (camelCase vs PascalCase)
-            // _jsonSerializerOptions = new JsonSerializerOptions
-            // {
-            //     PropertyNamingPolicy = JsonNamingPolicy.CamelCase, // Domyślnie w ASP.NET Core jest camelCase
-            //     ReferenceHandler = ReferenceHandler.IgnoreCycles // To może być przydatne, jeśli kiedyś będziesz serializować dane na froncie
-            // };
         }
+
+        // poniżej same metody do komunikacja z api od back
+        //wszedzie async zeby nie blokowac intefesow 
+        // jakies problemy z Car
+
 
         public async Task<ObservableCollection<City>> GetCitiesAsync()
         {
@@ -38,7 +33,6 @@ namespace CarRentalMobile.Services
             {
                 var response = await _httpClient.GetAsync($"{_baseUrl}Cities");
                 response.EnsureSuccessStatusCode();
-                // Zmieniono deserializację na System.Net.Http.Json.ReadFromJsonAsync
                 var cities = await response.Content.ReadFromJsonAsync<ObservableCollection<City>>();
                 return cities ?? new ObservableCollection<City>();
             }
@@ -47,7 +41,7 @@ namespace CarRentalMobile.Services
                 Debug.WriteLine($"Błąd HTTP podczas pobierania miast: {ex.Message}");
                 return new ObservableCollection<City>();
             }
-            catch (JsonException ex) // Catch JsonException dla System.Text.Json
+            catch (JsonException ex) 
             {
                 Debug.WriteLine($"Błąd deserializacji JSON dla miast: {ex.Message}");
                 return new ObservableCollection<City>();
@@ -65,7 +59,6 @@ namespace CarRentalMobile.Services
             {
                 var response = await _httpClient.GetAsync($"{_baseUrl}Cars");
                 response.EnsureSuccessStatusCode();
-                // Zmieniono deserializację
                 var cars = await response.Content.ReadFromJsonAsync<ObservableCollection<Car>>();
                 return cars ?? new ObservableCollection<Car>();
             }
@@ -90,9 +83,8 @@ namespace CarRentalMobile.Services
         {
             try
             {
-                var response = await _httpClient.GetAsync($"{_baseUrl}Cars/ByCity/{cityId}");
+                var response = await _httpClient.GetAsync($"{_baseUrl}Cars/ByCity/{cityId}");   
                 response.EnsureSuccessStatusCode();
-                // Zmieniono deserializację
                 var cars = await response.Content.ReadFromJsonAsync<ObservableCollection<Car>>();
                 return cars ?? new ObservableCollection<Car>();
             }
@@ -119,8 +111,7 @@ namespace CarRentalMobile.Services
             {
                 var response = await _httpClient.GetAsync($"{_baseUrl}Cars/{carId}");
                 response.EnsureSuccessStatusCode();
-                // Zmieniono deserializację
-                var car = await response.Content.ReadFromJsonAsync<Car>();
+                var car = await response.Content.ReadFromJsonAsync<Car>();  // konwert odpowiedzi do obiektu Car
                 return car;
             }
             catch (HttpRequestException ex)
@@ -144,10 +135,9 @@ namespace CarRentalMobile.Services
         {
             try
             {
-                // To już używa PostAsJsonAsync, które domyślnie korzysta z System.Text.Json
                 var response = await _httpClient.PostAsJsonAsync($"{_baseUrl}Reservations", reservation);
                 response.EnsureSuccessStatusCode();
-                return await response.Content.ReadFromJsonAsync<Reservation>();
+                return await response.Content.ReadFromJsonAsync<Reservation>();  // deserializacja odpowiedzi do obiektu Reservation
             }
             catch (Exception ex)
             {
@@ -174,13 +164,12 @@ namespace CarRentalMobile.Services
             {
                 var response = await _httpClient.GetAsync($"{_baseUrl}Reservations");
                 response.EnsureSuccessStatusCode();
-                var json = await response.Content.ReadAsStringAsync(); // Możesz zostawić dla debugu
+                var json = await response.Content.ReadAsStringAsync(); 
                 System.Diagnostics.Debug.WriteLine($"GetReservationsAsync - Raw JSON: {json}");
 
-                // ZMIEŃ TO: Użyj System.Text.Json
                 var reservations = await response.Content.ReadFromJsonAsync<ObservableCollection<Reservation>>();
 
-                System.Diagnostics.Debug.WriteLine($"GetReservationsAsync - Deserialized {reservations?.Count ?? 0} reservations.");
+                System.Diagnostics.Debug.WriteLine($"GetReservationsAsync - Deserialized {reservations?.Count ?? 0} reservations.");   // logowanie ile bylo rezerwacji
 
                 return reservations ?? new ObservableCollection<Reservation>();
             }
@@ -196,7 +185,7 @@ namespace CarRentalMobile.Services
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"Nieoczekiwany błąd podczas pobierania rezerwacji: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($"błąd podczas pobierania rezerwacji: {ex.Message}");
                 return new ObservableCollection<Reservation>();
             }
         }

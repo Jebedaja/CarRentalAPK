@@ -40,7 +40,7 @@ namespace CarRental.API.Data
 
 
 
-            // Dodanie początkowych danych (seed data) - przydatne do testowania
+            // seedowanie 
             modelBuilder.Entity<City>().HasData(
                 new City { Id = 1, Name = "Warszawa", ImageUrl = "https://carrentalapkstorage.blob.core.windows.net/obrazki/warszawa.jpg" },
                 new City { Id = 2, Name = "Kraków", ImageUrl = "https://carrentalapkstorage.blob.core.windows.net/obrazki/krak%C3%B3w.jpg" },

@@ -190,6 +190,8 @@ public partial class ReservationDetailsViewModel : ObservableObject
 
             if (createdReservation != null)
             {
+                Vibration.Vibrate(TimeSpan.FromMilliseconds(3000));
+
                 await Shell.Current.DisplayAlert("Sukces", $"Rezerwacja dla {SelectedCar.Brand} {SelectedCar.Model} została pomyślnie utworzona!", "OK");
                 // Po udanej rezerwacji, wróć do poprzedniej strony (np. listy samochodów)
                 // Możesz też nawigować do strony "Moje rezerwacje"

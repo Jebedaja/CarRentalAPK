@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using Microsoft.Maui.Controls;
 using Microsoft.Maui.ApplicationModel.Communication;
 using CarRentalMobile.Views;
-using Microsoft.Maui.ApplicationModel; // Dodaj ten using dla Permissions
+using Microsoft.Maui.ApplicationModel; 
 
 namespace CarRentalMobile.ViewModels;
 
@@ -11,7 +11,7 @@ public partial class MainDashboardViewModel : ObservableObject
 {
     public MainDashboardViewModel()
     {
-        // inicjalizacja jeśli potrzebna
+       
     }
 
     [RelayCommand]
@@ -27,12 +27,12 @@ public partial class MainDashboardViewModel : ObservableObject
     }
 
     [RelayCommand]
-    async Task CallUs() // Zmieniono na async Task
+    async Task CallUs() 
     {
         try
         {
-            // 1. Sprawdź i zażądaj uprawnień do dzwonienia
-            PermissionStatus status = await Permissions.CheckStatusAsync<Permissions.Phone>();
+            
+            PermissionStatus status = await Permissions.CheckStatusAsync<Permissions.Phone>(); // czy jest uprawnienie do dzwonienia
 
             if (status != PermissionStatus.Granted)
             {
@@ -43,28 +43,27 @@ public partial class MainDashboardViewModel : ObservableObject
             {
                 if (PhoneDialer.Default.IsSupported)
                 {
-                    PhoneDialer.Default.Open("123456789"); // <- wpisz tu swój numer
+                    PhoneDialer.Default.Open("123456789"); // numer przykladowy
                 }
                 else
                 {
-                    // To jest raczej niemożliwe na prawdziwym telefonie z modemem
-                    await Shell.Current.DisplayAlert("Błąd", "Funkcja dzwonienia nie jest obsługiwana na tym urządzeniu.", "OK");
+                    await Shell.Current.DisplayAlert("Błąd", "Funkcja dzwonienia nie dziala", "OK");
                 }
             }
             else
             {
-                // Użytkownik odmówił uprawnień
-                await Shell.Current.DisplayAlert("Błąd", "Brak uprawnień do dzwonienia. Aby zadzwonić, musisz zezwolić aplikacji na wykonywanie połączeń telefonicznych w ustawieniach urządzenia.", "OK");
+                // jak odmowo uprawnien
+                await Shell.Current.DisplayAlert("Błąd", "Brak uprawnień do dzwonienia. zewzwól aby kontynuować", "OK");
             }
         }
         catch (FeatureNotSupportedException ex)
         {
-            // Na przykład, jeśli aplikacja jest uruchomiona na tablecie bez modemu telefonicznego.
+            // to chyba glownie jak jest urządzenie bez funkcji dzwonienia np tablet
             await Shell.Current.DisplayAlert("Błąd", $"Dzwonienie nie jest obsługiwane na tym urządzeniu: {ex.Message}", "OK");
         }
         catch (Exception ex)
         {
-            // Inny, nieoczekiwany błąd
+            // Inne błądy
             await Shell.Current.DisplayAlert("Błąd", $"Wystąpił nieoczekiwany błąd podczas próby dzwonienia: {ex.Message}", "OK");
         }
     }
