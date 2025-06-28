@@ -28,10 +28,9 @@ namespace CarRentalAPI.Controllers
             return await _context.Cars.ToListAsync();
         }
 
-        [HttpGet("ByCity/{cityId}")] // Definicja trasy
+        [HttpGet("ByCity/{cityId}")] 
         public async Task<ActionResult<IEnumerable<Car>>> GetCarsByCity(int cityId)
         {
-            // Zakładamy, że model Car ma właściwość CityId
             var cars = await _context.Cars
                                     .Where(c => c.CityId == cityId)
                                     .ToListAsync();

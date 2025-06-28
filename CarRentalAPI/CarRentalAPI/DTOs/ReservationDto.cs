@@ -1,5 +1,5 @@
 ﻿using System;
-using CarRentalAPI.Models; // Nadal używasz modeli dla mapowania
+using CarRentalAPI.Models; 
 
 namespace CarRentalAPI.DTOs
 {
@@ -16,6 +16,6 @@ namespace CarRentalAPI.DTOs
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int CarId { get; set; }
-        public CarDto? Car { get; set; } // Używamy DTO dla samochodu
+        public CarDto? Car { get; set; } 
     }
 }

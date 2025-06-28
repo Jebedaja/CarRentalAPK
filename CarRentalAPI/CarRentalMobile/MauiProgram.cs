@@ -22,12 +22,13 @@ namespace CarRentalMobile
 
 #if DEBUG
             builder.Logging.AddDebug();
+
 #endif
 
-            // singleton;jedna instancja na cala apke
+            // singleton; konterner di daje jedna instancja na cala apke
             builder.Services.AddSingleton<CarRentalApiService>();
 
-            // transient to nowa instancja gdy jest potrzebna
+            // transient kontener di daje nowa instancja gdy jest potrzebna
             builder.Services.AddTransient<MainDashboardViewModel>(); 
             builder.Services.AddTransient<MainDashboardPage>();     
 

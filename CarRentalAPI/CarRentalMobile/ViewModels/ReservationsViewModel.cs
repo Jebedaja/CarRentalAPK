@@ -3,7 +3,7 @@ using CarRentalMobile.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Newtonsoft.Json;
-using Microsoft.Maui.Controls;  // dla Shell
+using Microsoft.Maui.Controls;  
 
 namespace CarRentalMobile.ViewModels;
 
@@ -15,7 +15,7 @@ public partial class ReservationViewModel : ObservableObject
     public ReservationViewModel()
     {
         _apiService = new CarRentalApiService();
-        SubmitReservationCommand = new AsyncRelayCommand(SendReservationAsync);
+        SubmitReservationCommand = new AsyncRelayCommand(SendReservationAsync);  //wysylanie rezerwacji
     }
 
     [ObservableProperty]
@@ -38,22 +38,22 @@ public partial class ReservationViewModel : ObservableObject
 
     public IAsyncRelayCommand SubmitReservationCommand { get; }
 
-    public string CarDisplay => SelectedCar is null
+    public string CarDisplay => SelectedCar is null  // jeśli nie wybrano samochodu
         ? "Wybrany pojazd"
-        : $"{SelectedCar.Brand} {SelectedCar.Model} ({SelectedCar.Year})";
+        : $"{SelectedCar.Brand} {SelectedCar.Model} ({SelectedCar.Year})"; // info o samochodzie
 
     partial void OnSelectedCarChanged(Car? value)
     {
-        OnPropertyChanged(nameof(CarDisplay));
+        OnPropertyChanged(nameof(CarDisplay));    // update info o samochodzie
     }
 
-    partial void OnCarJsonChanged(string value)
+    partial void OnCarJsonChanged(string value)  
     {
         if (!string.IsNullOrWhiteSpace(value))
         {
             try
             {
-                SelectedCar = JsonConvert.DeserializeObject<Car>(value);
+                SelectedCar = JsonConvert.DeserializeObject<Car>(value);    // deserializacja do obiektu car
             }
             catch (Exception ex)
             {
@@ -62,7 +62,7 @@ public partial class ReservationViewModel : ObservableObject
         }
     }
 
-    private async Task SendReservationAsync()
+    private async Task SendReservationAsync() // wysyłanie rezerwacji do API
     {
         // walidacja
         if (SelectedCar == null)
@@ -89,7 +89,7 @@ public partial class ReservationViewModel : ObservableObject
             return;
         }
 
-        // budujemy obiekt rezerwacji
+        // obiekt rezerwacji
         var reservation = new Reservation
         {
             FirstName = FirstName!,
@@ -103,7 +103,7 @@ public partial class ReservationViewModel : ObservableObject
 
         try
         {
-            // wywołanie API zwróci obiekt Reservation lub null
+            // zwróci obiekt Reservation lub null
             var result = await _apiService.CreateReservationAsync(reservation);
 
             if (result != null)

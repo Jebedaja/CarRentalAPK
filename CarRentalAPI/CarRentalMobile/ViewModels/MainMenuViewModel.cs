@@ -8,7 +8,7 @@ namespace CarRentalMobile.ViewModels
     public partial class MainMenuViewModel : ObservableObject
     {
         [RelayCommand]
-        private async Task GoToReservations()
+        private async Task GoToReservations() // navi
         {
             await Shell.Current.GoToAsync(nameof(ReservationsPage));
         }

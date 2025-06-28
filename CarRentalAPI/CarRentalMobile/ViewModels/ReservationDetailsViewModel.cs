@@ -4,8 +4,8 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Microsoft.Maui.Controls;
 using System;
-using System.Diagnostics; // Do Debug.WriteLine
-using System.Text.Json; // Dodaj ten using!
+using System.Diagnostics; 
+using System.Text.Json; 
 
 namespace CarRentalMobile.ViewModels;
 
@@ -14,7 +14,7 @@ public partial class ReservationDetailsViewModel : ObservableObject
 {
     private readonly CarRentalApiService _apiService;
 
-    // Properties odbierane z QueryProperty
+    //  odbierane z queryProperty
     private int _carId;
     public int CarId
     {
@@ -23,24 +23,23 @@ public partial class ReservationDetailsViewModel : ObservableObject
         {
             if (SetProperty(ref _carId, value))
             {
-                // Wywołaj komendę ładowania szczegółów samochodu po otrzymaniu CarId
-                LoadCarDetailsCommand.Execute(null);
+                LoadCarDetailsCommand.Execute(null); // jak dostanie id to ładowanie szczegółów samochodu
             }
         }
     }
 
     [ObservableProperty]
-    private Car _selectedCar; // Wybrany samochód, którego szczegóły są wyświetlane
+    private Car _selectedCar; // Wybrany samochód
 
-    // Pola formularza rezerwacji (wiązane z elementami UI)
+    // Pola formularza rezerwacji 
     [ObservableProperty]
     private string _customerName;
     [ObservableProperty]
     private string _customerSurname;
     [ObservableProperty]
-    private int _customerAge; // Wiek klienta
+    private int _customerAge; 
     [ObservableProperty]
-    private int _numberOfDays; // Liczba dni wynajmu
+    private int _numberOfDays; // liczba dni wynajmy
 
     [ObservableProperty]
     private DateTime _startDate = DateTime.Today; // Domyślnie dzisiaj
@@ -51,11 +50,11 @@ public partial class ReservationDetailsViewModel : ObservableObject
     private DateTime _endDate;
 
     [ObservableProperty]
-    private bool _isBusy; // Do wskaźnika ładowania
-    public bool IsNotBusy => !IsBusy; // Używane do włączania/wyłączania przycisku
+    private bool _isBusy; 
+    public bool IsNotBusy => !IsBusy; 
 
-    // Właściwość obliczeniowa dla całkowitej ceny
-    public decimal TotalPrice
+    
+    public decimal TotalPrice // Całkowita cena rezerwacji
     {
         get
         {
@@ -65,25 +64,21 @@ public partial class ReservationDetailsViewModel : ObservableObject
         }
     }
 
-    // Konstruktor ViewModelu
     public ReservationDetailsViewModel(CarRentalApiService apiService)
     {
         _apiService = apiService;
         UpdateEndDateAndPrice(); // Inicjalne obliczenie daty zakończenia i ceny
-        Debug.WriteLine("ReservationDetailsViewModel constructor called."); // Logowanie stworzenia ViewModelu
     }
 
     // Metody partial void On...Changed automatycznie generowane przez ObservableProperty
-    // Wywołujemy w nich NotifyCanExecuteChanged() aby zaktualizować stan przycisku rezerwacji
-    partial void OnCustomerNameChanged(string value) => MakeReservationCommand.NotifyCanExecuteChanged();
+    partial void OnCustomerNameChanged(string value) => MakeReservationCommand.NotifyCanExecuteChanged(); // notifyCan..informuje o zmianie stanu buttona
     partial void OnCustomerSurnameChanged(string value) => MakeReservationCommand.NotifyCanExecuteChanged();
     partial void OnCustomerAgeChanged(int value) => MakeReservationCommand.NotifyCanExecuteChanged();
-    partial void OnNumberOfDaysChanged(int value) => UpdateEndDateAndPrice(); // Oblicza EndDate i TotalPrice
-    partial void OnStartDateChanged(DateTime value) => UpdateEndDateAndPrice(); // Oblicza EndDate i TotalPrice
+    partial void OnNumberOfDaysChanged(int value) => UpdateEndDateAndPrice(); 
+    partial void OnStartDateChanged(DateTime value) => UpdateEndDateAndPrice(); // Oblicza date końcową i kwote lączna
 
 
-    // Metoda pomocnicza do obliczania daty zakończenia i całkowitej ceny
-    private void UpdateEndDateAndPrice()
+    private void UpdateEndDateAndPrice()  // obliczanie daty końcowej
     {
         if (NumberOfDays > 0)
         {
@@ -132,7 +127,7 @@ public partial class ReservationDetailsViewModel : ObservableObject
         finally
         {
             IsBusy = false;
-            MakeReservationCommand.NotifyCanExecuteChanged(); // Ważne: Po zakończeniu ładowania, zaktualizuj stan przycisku
+            MakeReservationCommand.NotifyCanExecuteChanged(); // Po zakończeniu ładowania, zaktualizuj stan przycisku
             Debug.WriteLine("LoadCarDetails: IsBusy set to false, NotifyCanExecuteChanged called.");
         }
     }
@@ -141,25 +136,20 @@ public partial class ReservationDetailsViewModel : ObservableObject
     [RelayCommand(CanExecute = nameof(CanMakeReservation))]
     async Task MakeReservation()
     {
-        // TEN KOMUNIKAT POWINIEN SIĘ POJAWIĆ, JEŚLI COMMAND ZOSTAŁ WYKONANY (tj. CanExecute zwróciło true)
-        Debug.WriteLine("MakeReservation command started.");
-
         if (IsBusy) return; // Jeśli już zajęty, wyjdź
 
         try
         {
-            IsBusy = true; // Ustaw flagę zajętości
+            IsBusy = true;
             Debug.WriteLine("MakeReservation: IsBusy set to true.");
 
             // Walidacja danych formularza
             if (SelectedCar == null || NumberOfDays <= 0 || CustomerAge < 21 || // Wiek musi być >= 21
                 string.IsNullOrWhiteSpace(CustomerName) || string.IsNullOrWhiteSpace(CustomerSurname))
             {
-                Debug.WriteLine("MakeReservation: Validation failed. Showing alert.");
-                await Shell.Current.DisplayAlert("Błąd", "Wypełnij wszystkie pola poprawnie (Wiek min. 21 lat, Dni min. 1).", "OK");
-                return; // Zatrzymaj wykonanie komendy, jeśli walidacja nie przeszła
+                await Shell.Current.DisplayAlert("Błąd", "Wypełnij wszystkie pola wiek i liczba dni wynajmu poprawnie (Wiek min. 21 lat, Dni min. 1).", "OK");
+                return; // jak nie przejdzie walidacji to wychodzi
             }
-            Debug.WriteLine("MakeReservation: Validation passed. Creating new reservation object.");
 
             // Tworzenie obiektu rezerwacji do wysłania do API
             var newReservation = new Reservation
@@ -169,56 +159,44 @@ public partial class ReservationDetailsViewModel : ObservableObject
                 LastName = CustomerSurname,
                 Age = CustomerAge,
                 RentalDays = NumberOfDays,
-                ReservationDate = DateTime.UtcNow, // Ustawiamy datę rezerwacji na teraz (UTC)
+                ReservationDate = DateTime.UtcNow, // Ustawiamy datę rezerwacji na teraz UTC
                 StartDate = StartDate.Date,
                 EndDate = EndDate.Date,
                 TotalCost = TotalPrice, // Całkowity koszt obliczony w ViewModelu
-                Status = "Pending" // Domyślny status rezerwacji
+                Status = "Pending" // yy
             };
 
-            // **************** NOWE LOGOWANIE JSON! ****************
-            var jsonOptions = new JsonSerializerOptions { WriteIndented = true }; // Dla ładnego formatowania JSON
+            var jsonOptions = new JsonSerializerOptions { WriteIndented = true }; // opcje serializacji
             var jsonPayload = JsonSerializer.Serialize(newReservation, jsonOptions);
-            Debug.WriteLine($"MakeReservation: Sending JSON Payload:\n{jsonPayload}");
-            // ************************************************
-
-            Debug.WriteLine($"Attempting to create reservation via API for CarId: {newReservation.CarId}, Customer: {newReservation.FirstName} {newReservation.LastName}, TotalCost: {newReservation.TotalCost}, Days: {newReservation.RentalDays}, StartDate: {newReservation.StartDate.ToShortDateString()}");
 
             // Wywołanie serwisu API do utworzenia rezerwacji
             var createdReservation = await _apiService.CreateReservationAsync(newReservation);
-            Debug.WriteLine($"CreateReservationAsync returned: {(createdReservation != null ? "Success" : "Null/Failed by API")}");
 
             if (createdReservation != null)
             {
-                Vibration.Vibrate(TimeSpan.FromMilliseconds(3000));
+                Vibration.Vibrate(TimeSpan.FromMilliseconds(3000));            // TUTAJ VIBRATION   <<-------------------
 
                 await Shell.Current.DisplayAlert("Sukces", $"Rezerwacja dla {SelectedCar.Brand} {SelectedCar.Model} została pomyślnie utworzona!", "OK");
-                // Po udanej rezerwacji, wróć do poprzedniej strony (np. listy samochodów)
-                // Możesz też nawigować do strony "Moje rezerwacje"
                 await Shell.Current.GoToAsync(".."); // Powrót na stronę listy samochodów
             }
             else
             {
-                await Shell.Current.DisplayAlert("Błąd", "Nie udało się utworzyć rezerwacji. Spróbuj ponownie. Sprawdź logi debugowania.", "OK");
+                await Shell.Current.DisplayAlert("Błąd", "Nie udało się utworzyć rezerwacji. Spróbuj ponownie", "OK");
             }
         }
         catch (Exception ex) // Obsługa błędów, które mogą wystąpić podczas procesu rezerwacji
         {
-            Debug.WriteLine($"Błąd podczas rezerwacji w MakeReservation (catch block): {ex.Message}");
             await Shell.Current.DisplayAlert("Błąd", $"Wystąpił błąd podczas tworzenia rezerwacji: {ex.Message}. Sprawdź połączenie z internetem lub dane.", "OK");
         }
         finally
         {
-            IsBusy = false; // Zawsze zresetuj flagę zajętości
-            MakeReservationCommand.NotifyCanExecuteChanged(); // Zawsze zaktualizuj stan przycisku po zakończeniu operacji
-            Debug.WriteLine("MakeReservation: IsBusy set to false, NotifyCanExecuteChanged called in finally block.");
+            IsBusy = false; 
+            MakeReservationCommand.NotifyCanExecuteChanged(); // aktualizacja stanu przycisku po zakończeniu operacji
         }
     }
 
-    // Metoda sprawdzająca, czy komenda MakeReservation może być wykonana (czy przycisk jest aktywny)
-    bool CanMakeReservation()
+    bool CanMakeReservation() 
     {
-        Debug.WriteLine("CanMakeReservation: Temporarily returning TRUE for testing purposes.");
-        return true; // Tymczasowo ustaw na true dla celów testowych
+        return true; // no potem to lepiej taa
     }
 }

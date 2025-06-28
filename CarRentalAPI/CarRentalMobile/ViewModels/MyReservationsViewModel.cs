@@ -27,19 +27,19 @@ namespace CarRentalMobile.ViewModels
         public ICommand LoadReservationsCommand { get; }
         public ICommand DeleteReservationCommand { get; }
 
-        public MyReservationsViewModel(CarRentalApiService apiService)
+        public MyReservationsViewModel(CarRentalApiService apiService) 
         {
             _apiService = apiService;
 
             Reservations = new ObservableCollection<Reservation>();
 
-            LoadReservationsCommand = new Command(async () => await LoadReservationsAsync());
+            LoadReservationsCommand = new Command(async () => await LoadReservationsAsync());  // ładowanie rezerwacji
             DeleteReservationCommand = new Command<Reservation>(async reservation =>
             {
                 if (reservation == null)
                     return;
 
-                bool confirm = await Shell.Current.DisplayAlert(
+                bool confirm = await Shell.Current.DisplayAlert(  // potwiedzenie usuwania rezerwacji
                     "Usuń",
                     $"Na pewno usunąć rezerwację?",
                     "Tak",
@@ -49,7 +49,7 @@ namespace CarRentalMobile.ViewModels
                     return;
 
                 IsBusy = true;
-                bool success = await _apiService.DeleteReservationAsync(reservation.Id);
+                bool success = await _apiService.DeleteReservationAsync(reservation.Id);    // wywolanie usuwania rezzerwacji z api
                 IsBusy = false;
 
                 if (success)
@@ -64,14 +64,14 @@ namespace CarRentalMobile.ViewModels
             });
         }
 
-        public async Task LoadReservationsAsync()
+        public async Task LoadReservationsAsync() 
         {
             if (IsBusy) return;
 
             try
             {
                 IsBusy = true;
-                var fetched = await _apiService.GetReservationsAsync();
+                var fetched = await _apiService.GetReservationsAsync();  // pobieranie rezerwacji z api
                 Reservations.Clear();
 
                 if (fetched != null)

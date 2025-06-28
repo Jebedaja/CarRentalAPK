@@ -3,9 +3,9 @@ using CarRentalMobile.ViewModels;
 
 public partial class ReservationDetailsPage : ContentPage
 {
-    public ReservationDetailsPage(ReservationDetailsViewModel viewModel) // DI wstrzykuje ViewModel
+    public ReservationDetailsPage(ReservationDetailsViewModel viewModel) 
     {
         InitializeComponent();
-        BindingContext = viewModel; // To jest kluczowe!
+        BindingContext = viewModel; 
     }
 }

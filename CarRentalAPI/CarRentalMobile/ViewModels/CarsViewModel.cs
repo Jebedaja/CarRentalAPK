@@ -81,7 +81,7 @@ public partial class CarsViewModel : ObservableObject
         }
     }
 
-    /
+    
     [RelayCommand]
     async Task GoToReservationDetails(Car selectedCar)  // obsluga wyboru samochodu
     {

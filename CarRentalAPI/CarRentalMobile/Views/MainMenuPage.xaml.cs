@@ -8,7 +8,7 @@ namespace CarRentalMobile.Views
         public MainMenuPage()
         {
             InitializeComponent();
-            BindingContext = new MainMenuViewModel(); // ← tu podpinamy ViewModel
+            BindingContext = new MainMenuViewModel(); // wstrzykiwanie ViewModelu
         }
 
         private async void OnReservationClicked(object sender, EventArgs e)
@@ -18,7 +18,7 @@ namespace CarRentalMobile.Views
 
         private async void OnMyReservationsClicked(object sender, EventArgs e)
         {
-            // Tutaj później podłączymy stronę Moje Rezerwacje
+            // to juz nie istnieje?
             await Shell.Current.DisplayAlert("Info", "Widok Moje Rezerwacje jeszcze nie istnieje.", "OK");
         }
     }

@@ -4,18 +4,18 @@ namespace CarRentalMobile.Views;
 
 public partial class CitiesPage : ContentPage
 {
-    // Wstrzykiwanie ViewModelu przez konstruktor
+    // Wstrzykiwanie ViewModelu 
     public CitiesPage(CitiesViewModel viewModel)
     {
         InitializeComponent();
-        BindingContext = viewModel; // Ustawienie kontekstu wi¹zania na ViewModel
+        BindingContext = viewModel; 
     }
 
-    // Metoda wywo³ywana, gdy strona siê pojawi
+    // gdy strona siê pojawi
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        // Wywo³aj komendê ³adowania miast, gdy strona siê pojawi
+        // ³adowanie miast, gdy strona siê pojawi
         if (BindingContext is CitiesViewModel viewModel && viewModel.LoadCitiesCommand.CanExecute(null))
         {
             await viewModel.LoadCitiesCommand.ExecuteAsync(null);

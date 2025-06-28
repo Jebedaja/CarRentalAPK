@@ -12,19 +12,16 @@ namespace CarRentalMobile.Views
         {
             InitializeComponent();
 
-            // Tworzymy serwis i ViewModel
-            var apiService = new CarRentalApiService();
-            viewModel = new MyReservationsViewModel(apiService);
+            var apiService = new CarRentalApiService(); // inicjalizacja serwisu api
+            viewModel = new MyReservationsViewModel(apiService); //
 
-            // Przypisujemy kontekst danych
             BindingContext = viewModel;
         }
 
         protected override void OnAppearing()
         {
-            base.OnAppearing();
-            // Wywo³ujemy za³adowanie rezerwacji
-            viewModel.OnAppearing();
+            base.OnAppearing(); 
+            viewModel.OnAppearing(); // ladowanie rezerwacji przy pojawieniu siê strony
         }
     }
 }

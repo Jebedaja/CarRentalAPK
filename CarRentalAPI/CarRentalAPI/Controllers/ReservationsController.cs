@@ -76,8 +76,7 @@ namespace CarRentalAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Reservation>> PostReservation(Reservation reservation)
         {
-            // Dodaj walidację ModelState - zawsze dobra praktyka!
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid) 
             {
                 return BadRequest(ModelState);
             }
@@ -89,8 +88,6 @@ namespace CarRentalAPI.Controllers
                 return BadRequest("Invalid CarId provided.");
             }
 
-            // Logika dla klienta została usunięta
-            // Front-end będzie po prostu wysyłać FirstName, LastName, Age jako część Reservation
 
             _context.Reservations.Add(reservation);
             await _context.SaveChangesAsync();

@@ -62,7 +62,7 @@
                 </CollectionView>
             </RefreshView>
 
-            <!-- Loader -->
+           
             <ActivityIndicator
         IsRunning="{Binding IsBusy}"
         IsVisible="{Binding IsBusy}"

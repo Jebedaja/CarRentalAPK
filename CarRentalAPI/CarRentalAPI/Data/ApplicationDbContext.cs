@@ -9,12 +9,11 @@ namespace CarRental.API.Data
         {
         }
 
-        // Definicja tabel w bazie danych
+        // jakie tabele w bazie
         public DbSet<City> Cities { get; set; }
         public DbSet<Car> Cars { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
 
-        // Opcjonalnie: Konfiguracja relacji i danych początkowych
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -24,14 +23,13 @@ namespace CarRental.API.Data
                 .HasColumnType("decimal(18, 2)"); 
 
 
-            // Konfiguracja klucza obcego dla Car
-            modelBuilder.Entity<Car>()
+           
+            modelBuilder.Entity<Car>() 
                 .HasOne(c => c.City)
                 .WithMany(city => city.Cars)
-                .HasForeignKey(c => c.CityId)
-                .OnDelete(DeleteBehavior.Restrict); // Możesz wybrać Restrict lub Cascade
+                .HasForeignKey(c => c.CityId) // klucz obcy
+                .OnDelete(DeleteBehavior.Restrict); 
 
-            // Konfiguracja klucza obcego dla Reservation
             modelBuilder.Entity<Reservation>()
                 .HasOne(r => r.Car)
                 .WithMany(car => car.Reservations)
