@@ -17,7 +17,7 @@
 
         <CollectionView Grid.Row="1"
                         ItemsSource="{Binding Cities}"
-                        SelectionMode="None"  >
+                        SelectionMode="None" >
             <CollectionView.EmptyView>
                 <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                     <Label Text="Brak dostępnych miast." FontSize="Medium" />
@@ -27,13 +27,20 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:City">
                     <Frame Margin="10" Padding="10" CornerRadius="5" HasShadow="True">
-                        <StackLayout Orientation="Vertical" Padding="5">
-                            <StackLayout.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:CitiesViewModel}}, Path=GoToCarsCommand}"
-                                                      CommandParameter="{Binding .}" />
-                            </StackLayout.GestureRecognizers>
-                            <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Large" />
-                        </StackLayout>
+                        <Grid ColumnDefinitions="*, Auto" RowDefinitions="Auto">
+                            <StackLayout Grid.Column="0" Orientation="Vertical" Padding="5" VerticalOptions="CenterAndExpand">
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:CitiesViewModel}}, Path=GoToCarsCommand}"
+                                                          CommandParameter="{Binding .}" />
+                                </StackLayout.GestureRecognizers>
+                                <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="Large" />
+                            </StackLayout>
+
+                            <Image Grid.Column="1"
+                                   Source="{Binding ImageUrl}"
+                                   Aspect="AspectFill"      WidthRequest="80"       HeightRequest="80"      VerticalOptions="Center"
+                                   HorizontalOptions="End" />
+                        </Grid>
                     </Frame>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
